@@ -56,6 +56,16 @@
     text-[16px]
     lg:leading-[40px]
   }
+
+  .sectionSubText {
+    @apply
+    font-black
+    text-white
+    text-[30px]
+    xs:text-[40px] 
+    sm:text-[50px] 
+    md:text-[60px]
+  }
 }
 
 
