@@ -13,6 +13,52 @@
   color-scheme: dark;
 }
 
+@layer components {
+  .padding-x {
+  @apply
+    sm:px-16
+    px-6
+  }
+
+  .padding-y {
+  @apply
+    sm:py-16
+    py-6
+  }
+
+  .padding {
+  @apply
+    sm:px-16
+    sm:py-16
+    px-6
+    py-10
+  }
+
+  .heroHeadText {
+  @apply
+    font-black
+    text-white 
+    lg:text-[80px]
+    sm:text-[60px]
+    xs:text-[50px]
+    text-[40px]
+    lg:leading-[98px]
+    mt-2
+  }
+
+  .heroSubText {
+    @apply 
+    font-medium
+    text-[#dfd9ff]
+    lg:text-[30px]
+    sm:text-[26px]
+    xs:text-[20px]
+    text-[16px]
+    lg:leading-[40px]
+  }
+}
+
+
 .hash-span {
   margin-top: -100px;
   padding-bottom: 100px;
@@ -204,24 +250,3 @@
 }
 
 
-@layer components {
-  .padding-x {
-  @apply
-    sm:px-16
-    px-6
-  }
-
-  .padding-y {
-  @apply
-    sm:py-16
-    py-6
-  }
-
-  .padding {
-  @apply
-    sm:px-16
-    sm:py-16
-    px-6
-    py-10
-  }
-}
