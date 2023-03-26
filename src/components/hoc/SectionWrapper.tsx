@@ -2,12 +2,6 @@ import React, {type ComponentType} from 'react'
 import { motion } from 'framer-motion'
 import { staggerContainer } from '../../utils/motion'
 
-
-interface SectionWrapperProps {
-  idName: string;
-  Component: ComponentType;
-}
-
 const SectionWrapper = (Component: ComponentType, idName: string) => {
   const HOC = () => {
     return (
