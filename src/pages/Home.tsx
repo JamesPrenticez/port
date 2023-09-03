@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Body from "../components/layout/Body";
-import CanvasComponent from "../components/Canvas";
-import Test from "../components/AnimatedCanvas";
+import Particles from "../components/Particles";
 
 const Home = () => {
   const [value, setValue] = useState("-")
@@ -16,7 +15,7 @@ const Home = () => {
           onChange={(e) => setValue(e.target.value)}
         /> */}
 
-        <CanvasComponent text={'James'}/>
+        <Particles text={'James'}/>
 
       </div>
     </Body>

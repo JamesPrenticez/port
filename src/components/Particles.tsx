@@ -3,7 +3,7 @@ import useCanvas from '../hooks/useCanvas';
 import useMousePosition from '../hooks/useMousePosition';
 import useScreenSize from '../hooks/useScreenSize';
 
-const CanvasComponent = (props) => {
+const Particles = (props) => {
   const parentRef = useRef(null);
   const [parentDimensions, setParentDimensions] = useState({ width: 1200, height: 800 });
   // const canvasDimensions = { width: parentDimensions.width, height: parentDimensions.height };
@@ -235,6 +235,4 @@ const CanvasComponent = (props) => {
   );
 };
 
-export default CanvasComponent;
-
-
+export default Particles;
