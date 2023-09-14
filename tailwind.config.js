@@ -45,6 +45,7 @@ module.exports = {
         jump: 'jump 1s ease-in-out 1',
         wiggle: 'wiggle 1s ease-in-out infinite',
         flash: 'flash 1s ease-in-out 1',
+        bouncer: "bouncer 1s ease-in-out 3"
       },
       keyframes: {
         jump:{
@@ -63,6 +64,10 @@ module.exports = {
           from: { backgroundColor: 'rgb(34 197 94)' },
           to: { backgroundColor: 'rgb(239 68 68)' },
         },
+        bouncer: {
+          "0%, 100%": {transform: "translateY(0)"},
+          "50%": {transform: "translateY(-25%)"},
+       } 
       },
     },
   },

@@ -26,8 +26,8 @@ const App = (): React.ReactElement => {
     >
       {/* <Layout> */}
         <Routes>
-          <Route path="/" element={<Particles text={'James Prentice'}/>} />
-          {/* <Route path="/" element={<Home />} /> */}
+          {/* <Route path="/" element={<Particles text={'James Prentice'}/>} /> */}
+          <Route path="/" element={<Home />} />
           {/* <Route path="/home" element={<Home />} /> */}
           {/* <Route path="/about" element={<About />} /> */}
           <Route path="*" element={<NotFound />} />

@@ -5,3 +5,25 @@
 * {
   box-sizing: "border-box"
 }
+
+html {
+  scroll-snap-type: y mandatory;
+}
+
+::-webkit-scrollbar {
+  height: 5px;
+  width: 5px;
+  /* background: var(--background); */
+  background: linear-gradient(180deg, #91f 0%, #40f 100%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  -webkit-border-radius: 1ex;
+}
+
+::-webkit-scrollbar-corner {
+  background: linear-gradient(180deg, #91f 0%, #40f 100%);
+  /* background: var(--background); */
+}
+

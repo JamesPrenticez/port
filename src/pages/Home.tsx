@@ -1,24 +1,44 @@
-import React, { useState } from "react";
-import Body from "../components/layout/Body";
-import Particles from "../components/Particles";
+import React, { useRef } from "react";
+import Navbar from "@components/Navbar";
+import Hero from "@components/Hero/Hero";
+import Footer from "@components/Footer";
+import Section from "@components/layout/Section";
+import Skills from "@components/Skills";
+import ProjectsSummary from "@components/ProjectsSummary";
+import Hobbies from "@components/Hobbies";
 
 const Home = () => {
-  const [value, setValue] = useState("-")
+  const heroRef = useRef(null)
+  const skillsRef = useRef(null)
+  const projectsRef = useRef(null)
+  const hobbiesRef = useRef(null)
 
   return (
-    <Body>
-      <div className="relative w-full bg-green-700">
+    <main>
+      {/* Hero */}
+      <Section ref={heroRef} className="bg-blue-700">
+        <Navbar {...{skillsRef, projectsRef, hobbiesRef}} />
+        <Hero />
+      </Section>
 
-        {/* <input 
-          type="text"
-          className="absolute m-[10px] p-[10px] w-[calc(100%-20px)] z-50"
-          onChange={(e) => setValue(e.target.value)}
-        /> */}
+      {/* Skills */}
+      <Section ref={skillsRef} className="bg-purple-600">
+        <Skills />
+      </Section>
 
-        <Particles text={'James'}/>
+      {/* Portfolio */}
+      <Section ref={projectsRef} className="bg-blue-700">
+        <ProjectsSummary />
+      </Section>
 
-      </div>
-    </Body>
+      {/* Hobbies */}
+      <Section ref={hobbiesRef} className="bg-purple-600">
+        <Hobbies /> 
+      </Section>
+
+      <Footer/>
+
+    </main>
   );
 };
 
