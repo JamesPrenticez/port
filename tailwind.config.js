@@ -45,7 +45,10 @@ module.exports = {
         jump: 'jump 1s ease-in-out 1',
         wiggle: 'wiggle 1s ease-in-out infinite',
         flash: 'flash 1s ease-in-out 1',
-        bouncer: "bouncer 1s ease-in-out 3"
+        bouncer: "bouncer 1s ease-in-out 3",
+        spinSlow: "spinSlow 5s linear infinite",
+        slideLeft: "slideLeft 30s linear infinite",
+        slideRight: "slideRight 30s linear infinite"
       },
       keyframes: {
         jump:{
@@ -58,16 +61,28 @@ module.exports = {
         },
         wiggle: {
           '0%, 100%': { transform: 'rotate(-3deg)' },
-          '50%': { transform: 'rotate(3deg)' },
+          '50%': { transform: 'rotate(3deg)' }
         },     
         flash: {
           from: { backgroundColor: 'rgb(34 197 94)' },
-          to: { backgroundColor: 'rgb(239 68 68)' },
+          to: { backgroundColor: 'rgb(239 68 68)' }
         },
         bouncer: {
           "0%, 100%": {transform: "translateY(0)"},
-          "50%": {transform: "translateY(-25%)"},
-       } 
+          "50%": {transform: "translateY(-25%)"}
+       },
+       spinSlow: {
+          "0%": { transform: "rotate(0deg)"},
+          "100%": { transform: "rotate(360deg)"}
+        },
+        slideLeft: {
+          "from": { transform: "translateX(0)"},
+          "to": { transform: "translateX(-100%)"},
+        },
+        slideRight: {
+          "from": { transform: "translateX(-100%)"},
+          "to": { transform: "translateX(0)"},
+        }
       },
     },
   },

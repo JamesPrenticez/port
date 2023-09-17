@@ -9,3 +9,8 @@
 // https://github.com/malerba118/react-particle-image/tree/master
 
 https://github.dev/malerba118/react-particle-image/tree/master >>> utils.ts
+
+
+Cool animation 
+
+https://www.youtube.com/watch?v=wo-rf-dzoHo

@@ -1,5 +1,5 @@
 {
-  "name": "boilerplate",
+  "name": "portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -40,6 +40,7 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
+    "framer-motion": "^10.16.4",
     "postcss": "^8.4.24",
     "prettier": "^2.8.8",
     "react-icons": "^4.10.1",

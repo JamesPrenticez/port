@@ -1,6 +1,5 @@
-import React, { useState, useEffect, useMemo, forwardRef, useRef } from 'react';
-import { blobGenerator } from "../../utils/blobGenerator";
-import { type SvgBlobProps } from 'models';
+import React, { useState, useEffect, useRef } from 'react';
+import { blobGenerator, randomNumber } from "../../utils";
 
 // https://github.com/nghiepdev/react-svg-blob
 // https://codesandbox.io/s/react-svg-blob-kuzpc?file=/src/App.tsx:599-785 
@@ -40,8 +39,8 @@ export const BlobsForever = ({
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSeed((prevSeed) => prevSeed + 1);
-    }, 3000); // Change seed every 2 seconds
+      setCurrentSeed((prevSeed) => prevSeed + randomNumber(1, 1000));
+    }, 2000); // Change seed every 2 seconds
 
     return () => clearInterval(interval);
   }, []);
@@ -62,7 +61,7 @@ export const BlobsForever = ({
 
   const pathProps = {
     fill: 'url(#gradient)',
-    style: { transition: "d 3s ease-in-out" }
+    style: { transition: "d 2s ease-in-out" }
   };
 
   return (

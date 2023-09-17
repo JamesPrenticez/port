@@ -27,3 +27,8 @@ html {
   /* background: var(--background); */
 }
 
+@layer utilities {
+  .pause-animation {
+    animation-play-state: paused;
+  }
+}

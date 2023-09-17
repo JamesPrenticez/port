@@ -16,13 +16,13 @@ const Home = () => {
   return (
     <main>
       {/* Hero */}
-      <Section ref={heroRef} className="bg-blue-700">
+      <Section ref={heroRef} className="bg-blue-600">
         <Navbar {...{skillsRef, projectsRef, hobbiesRef}} />
         <Hero />
       </Section>
 
       {/* Skills */}
-      <Section ref={skillsRef} className="bg-purple-600">
+      <Section ref={skillsRef} className="bg-blue-500">
         <Skills />
       </Section>
 
@@ -32,7 +32,7 @@ const Home = () => {
       </Section>
 
       {/* Hobbies */}
-      <Section ref={hobbiesRef} className="bg-purple-600">
+      <Section ref={hobbiesRef} className="bg-blue-600">
         <Hobbies /> 
       </Section>
 
