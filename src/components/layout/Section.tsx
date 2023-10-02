@@ -15,8 +15,10 @@ const Section = forwardRef(({
   return (
     <section 
       ref={ref} 
-      className={`h-screen relative ${className}`}
-      style={{ scrollSnapAlign: "center"}}
+      className={`min-h-screen flex flex-col relative md:snap-center ${className}`}
+      // style={{ 
+      //   scrollSnapAlign: "center"
+      // }}
     >
       {children}
     </section>

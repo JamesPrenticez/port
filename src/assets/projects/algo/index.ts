@@ -1,0 +1,1 @@
+export { default as algo0 } from './algo0.webp';

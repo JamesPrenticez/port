@@ -1,8 +1,17 @@
 import React from 'react'
+import Title from './common/Title'
+import Grid from './Grid/Grid'
+import GridDnD from './GridDnD/GridDnD'
 
 function ProjectsSummary() {
   return (
-    <div>ProjectsSummary</div>
+    <div className='w-full'>
+      <Title text="Projects Summary" />
+
+      
+
+      <Grid />
+    </div>
   )
 }
 

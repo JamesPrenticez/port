@@ -21,6 +21,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.22.5",
+    "@dnd-kit/core": "^6.0.8",
+    "@dnd-kit/sortable": "^7.0.2",
     "@rollup/plugin-alias": "^5.0.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",

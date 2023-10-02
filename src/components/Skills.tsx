@@ -5,6 +5,7 @@ import { Slide } from './FramerMotion/Slide'
 import Carousel from './HorizontalScroller'
 import { type ISkills } from 'models'
 import HorizontalScroller from './HorizontalScroller'
+import Title from './common/Title'
 
 const skills: ISkills[] = [
   {id: 1, name: "HTML", icon: <HTMLIcon />},
@@ -24,7 +25,7 @@ const items = ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5'];
 
 function Skills() {
   return (
-    <div className='max w-full bg-red-500'>
+    <div className='w-full'>
 
     {/* <Reveal>
       <h1 className='text-4xl text-center mb-6 font-medium text-gray-100'>
@@ -38,7 +39,11 @@ function Skills() {
       </h1>
     </Slide> */}
 
-    <HorizontalScroller items={skills} direction="left" />
+    <Title text="Skills" />
+
+
+
+    {/* <HorizontalScroller items={skills} direction="left" /> */}
     <HorizontalScroller items={skills} direction="right" />
 
     </div>

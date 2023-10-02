@@ -1,8 +1,14 @@
 import React from 'react'
 import TextEffect from './common/TextEffect'
+import { useRefContext } from './providers/refProvider'
 
-function Navbar({skillsRef, projectsRef, hobbiesRef}) {
-  const executeScroll = (ref) => ref.current.scrollIntoView({behavior: "smooth"})  
+function Navbar() {
+  const { projectsRef, skillsRef, hobbiesRef} = useRefContext()
+
+  const executeScroll = (ref) => {
+    ref.current.scrollIntoView({behavior: "smooth"})  
+  }
+  
   return (
     <nav className="absolute top-0 left-0 py-5 w-full z-50 px-4 flex">
       

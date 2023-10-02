@@ -12,7 +12,7 @@ function TextEffect({
   color2 = "#f3f4f6"
 }: Props) {
   return (
-    <div className="relative text-4xl md:text-7xl font-extrabold">
+    <div className="relative text-4xl md:text-7xl font-extrabold whitespace-nowrap">
       <h1 
         className="absolute top-0 left-0 font-bold ml-[0.25rem] md:ml-[0.4rem]"
         style={{color: color1}}
@@ -20,7 +20,7 @@ function TextEffect({
         {text}
       </h1>
       <h1 
-        className="absolute  font-bold select-none " 
+        className="absolute font-bold" 
         style={{color: color2}}
       >
         {text}

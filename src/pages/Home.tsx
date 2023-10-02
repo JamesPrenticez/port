@@ -6,6 +6,7 @@ import Section from "@components/layout/Section";
 import Skills from "@components/Skills";
 import ProjectsSummary from "@components/ProjectsSummary";
 import Hobbies from "@components/Hobbies";
+import { RefProvider } from "@components/providers/refProvider";
 
 const Home = () => {
   const heroRef = useRef(null)
@@ -14,31 +15,33 @@ const Home = () => {
   const hobbiesRef = useRef(null)
 
   return (
-    <main>
-      {/* Hero */}
-      <Section ref={heroRef} className="bg-blue-600">
-        <Navbar {...{skillsRef, projectsRef, hobbiesRef}} />
-        <Hero />
-      </Section>
+    <RefProvider value={{ heroRef, skillsRef, projectsRef, hobbiesRef}}>
+      <main>
+        {/* Hero */}
+        <Section ref={heroRef} className="bg-blue-600">
+          <Navbar />
+          <Hero />
+        </Section>
 
-      {/* Skills */}
-      <Section ref={skillsRef} className="bg-blue-500">
-        <Skills />
-      </Section>
+        {/* Skills */}
+        <Section ref={skillsRef} className="bg-blue-500">
+          <Skills />
+        </Section>
 
-      {/* Portfolio */}
-      <Section ref={projectsRef} className="bg-blue-700">
-        <ProjectsSummary />
-      </Section>
+        {/* Portfolio */}
+        <Section ref={projectsRef} className="bg-blue-700">
+          <ProjectsSummary />
+        </Section>
 
-      {/* Hobbies */}
-      <Section ref={hobbiesRef} className="bg-blue-600">
-        <Hobbies /> 
-      </Section>
+        {/* Hobbies */}
+        <Section ref={hobbiesRef} className="bg-blue-600">
+          <Hobbies /> 
+        </Section>
 
-      <Footer/>
+        <Footer/>
 
-    </main>
+      </main>
+    </RefProvider>
   );
 };
 
