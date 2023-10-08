@@ -6,6 +6,7 @@ export { default as MtCook } from './MtCook';
 export { Handwriting as Handwriting } from './Handwriting';
 
 // Already done
+// [] Weird Input - https://codepen.io/ipacmanx/pen/NLeEwJ
 // [x] Bard 
 // [] Cube -
 // [x] Cogs -
@@ -20,15 +21,17 @@ export { Handwriting as Handwriting } from './Handwriting';
 // [] Isometric grid - https://github.com/JamesPrenticez/isometric
 // [] Three js minecraft chest - https://github.com/JamesPrenticez/three
 // [] Ellipses
-// [xxx] Mt Cook Parallax - remove this for this https://www.youtube.com/watch?v=Yo3j_Dx4u7c
+// [x] Mt Cook Parallax (change to firewatch?)
+// [] Cool Parallax - remove this for this https://www.youtube.com/watch?v=Yo3j_Dx4u7c
 // [] Cool Carousel
 // [x] Hand Writing Effect - https://maxwellito.github.io/vivus-instant/ | https://codepen.io/OlgaKoplik/pen/YbwLNO | https://codepen.io/simon_tw/pen/zeJKPz
+// [] projjects background -  https://codepen.io/marianarlt/details/NxWXXd
 
 // Ideas
-// [] run away button
-// buttons
+// [] runaway button - https://codepen.io/jsonhoward-the-typescripter/pen/pogZXNB
+// buttons - https://codepen.io/yuhomyan/pen/OJMejWJ
+// crane - https://codepen.io/FiascoDesign/pen/YWaKdW
 // keyboard gsap 3d - https://www.youtube.com/watch?v=x3m1PGEfG5c
-// Weird Input - https://codepen.io/ipacmanx/pen/NLeEwJ
 // Triangle images - https://codepen.io/designersnest/pen/WNreJQd
 // Letter Hop - https://codepen.io/ste-vg/pen/GRwmqxq
 // Tuggable Light Bulb - https://codepen.io/jh3y/pen/VwjgdLj

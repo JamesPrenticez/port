@@ -28,7 +28,7 @@ export const Slide = ({ children, width = "fit-content" }: Props) => {
         variants={{
           hidden: { 
             opacity: 0, 
-            x: "-100%",
+            x: "100%",
           },
           visible: { 
             opacity: 1, 
@@ -42,9 +42,9 @@ export const Slide = ({ children, width = "fit-content" }: Props) => {
         {children}
       </motion.div>
 
-        <button className="p-4 bg-red-500 text-white"
+        {/* <button className="p-4 bg-red-500 text-white"
           onClick={() => setToggle((prev) => !prev)}
-        >toggle - {JSON.stringify(toggle)}</button>
+        >toggle - {JSON.stringify(toggle)}</button> */}
     </div>
   );
 };

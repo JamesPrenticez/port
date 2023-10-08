@@ -2,7 +2,8 @@ import React, { type ReactElement } from 'react'
 import { GithubIcon, LinkedInIcon, ReactIcon } from '../icons'
 import ScrollDownIndicator from './ScrollDownIndicator'
 import { BlobsForever } from './BlobsForever'
-import { Reveal } from '@components/FramerMotion/Reveal';
+// import { Reveal } from '@components/FramerMotion/Reveal';
+import { Slide } from '@components/FramerMotion/Slide';
 
 // NOTE: This is a little bit funky bcuz of col-reverse we align to the bottom which is really the top 
 
@@ -13,9 +14,15 @@ function Hero(): ReactElement{
       <div className='text-gray-100 py-5 px-6 text-sm sm:text-xl md:text-3xl font-medium'>
           <p className='leading-[1.5rem] md:leading-[3.25rem]'>
             <span className='text-orange-400 text-2xl md:text-4xl font-bold'>Hello!</span>
-            <Reveal>
+            
+            {/* <Reveal>
               <span className='block text-5xl leading-[4rem] md:text-[8rem] md:leading-[9rem] font-bold'>I&apos;m James</span>
-            </Reveal>
+            </Reveal> */}
+
+            <Slide>
+              <span className='block text-5xl leading-[4rem] md:text-[8rem] md:leading-[9rem] font-bold'>I&apos;m James</span>
+            </Slide> 
+
             A highly passionate and seriously creative
             <span className="before:block before:absolute before:-inset-y-[0rem] before:-inset-x-[0.25rem] md:before:-inset-x-[0.5rem] before:-skew-x-[12deg] before:-skew-y-[0deg] mx-3 md:mr-6 before:bg-[#fba81f] relative inline-block md:leading-[3rem]">
               <span className='font-bold italic relative text-blue-700'>fullstack web developer</span>

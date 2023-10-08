@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react"
-import { cohorts } from "../../data"
+// import { cohorts } from "../../data"
 
 function Slider() {
   const [index, setIndex] = useState(0)
   const delay = 4000
+
+  const cohorts = []
 
   //To make the slideshow automatic, we change the index every 2,5 seconds using setTimeout.
   //Since this is a side effect, we do so with useEffect.
@@ -19,18 +21,18 @@ function Slider() {
 
   const goToPrevSlide = () => {
     if(index < 1){
-      index = cohorts.length -1
+      setIndex(cohorts.length -1)
     } else {
-      index--
+      setIndex(index - 1)
     }
     setIndex(index)
   }
 
   const goToNextSlide = () => {
     if(index === cohorts.length - 1){
-      index = 0
+      setIndex(0)
     } else {
-      index ++
+      setIndex(index + 1)
     }
     setIndex(index)
   }
