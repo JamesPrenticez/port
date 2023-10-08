@@ -1,13 +1,7 @@
 import React, { useRef } from 'react'
 
-import one from "../../assets/playgroundProjects/mtcook/01.svg"
-import two from "../../assets/playgroundProjects/mtcook/02.svg"
-import three from "../../assets/playgroundProjects/mtcook/03.svg"
-import four from "../../assets/playgroundProjects/mtcook/04.svg"
-import five from "../../assets/playgroundProjects/mtcook/05.svg"
-
+import { one, two, three, four, five } from '../../assets/playgroundProjects/mtcook';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax' 
-import TextEffect from '../common/TextEffect'
 
 const ParallaxMtCook = () => {
   const skillsRef = useRef(null)
