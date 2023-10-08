@@ -22,6 +22,7 @@ export default defineConfig({
       entries: [
         { find: '@components', replacement: '/src/components' },
         { find: '@hooks', replacement: '/src/hooks' },
+        { find: '@assets', replacement: '/src/assets' },
       ],
     }),
   ],

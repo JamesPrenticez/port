@@ -1,10 +1,10 @@
 import React, { useRef } from 'react'
 
 // import { one, two, three, four, five } from '../../assets/playgroundProjects/mtcook';
-import one from "../../assets/playgroundProjects/mtcook/01.svg"
-import two from "../../assets/playgroundProjects/mtcook/02.svg"
-import three from "../../assets/playgroundProjects/mtcook/03.svg"
-import four from "../../assets/playgroundProjects/mtcook/04.svg"
+import one from "@assets/playgroundProjects/mtcook/01.svg"
+import two from "@assets/playgroundProjects/mtcook/02.svg"
+import three from "@assets/playgroundProjects/mtcook/03.svg"
+import four from "@assets/playgroundProjects/mtcook/04.svg"
 
 
 import { Parallax, ParallaxLayer } from '@react-spring/parallax' 

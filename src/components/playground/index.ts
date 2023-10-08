@@ -21,9 +21,9 @@ export { Handwriting as Handwriting } from './Handwriting';
 // [] Isometric grid - https://github.com/JamesPrenticez/isometric
 // [] Three js minecraft chest - https://github.com/JamesPrenticez/three
 // [] Ellipses
-// [x] Mt Cook Parallax (change to firewatch?)
-// [] Cool Parallax - remove this for this https://www.youtube.com/watch?v=Yo3j_Dx4u7c
-// [] Cool Carousel
+// [x] Mt Cook Parallax
+// [] Firewatch Parallax - https://github.com/JamesPrenticez/arcade/commit/39e9b3094b28cc43e9185c71838c77363bf4789a#diff-1d8402cb1fef613d6f3026c2a376177c3c8223ed5ffa91d92f3a3eb087120623
+// [] Zhangjiajie Parallax - remove this for this https://www.youtube.com/watch?v=Yo3j_Dx4u7c
 // [x] Hand Writing Effect - https://maxwellito.github.io/vivus-instant/ | https://codepen.io/OlgaKoplik/pen/YbwLNO | https://codepen.io/simon_tw/pen/zeJKPz
 // [] projjects background -  https://codepen.io/marianarlt/details/NxWXXd
 
