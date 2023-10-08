@@ -1,11 +1,5 @@
 import React, { useRef } from 'react'
-
-// import { one, two, three, four, five } from '../../assets/playgroundProjects/mtcook';
-import one from "@assets/playgroundProjects/mtcook/01.svg?url"
-import two from "@assets/playgroundProjects/mtcook/02.svg?url"
-import three from "@assets/playgroundProjects/mtcook/03.svg?url"
-import four from "@assets/playgroundProjects/mtcook/04.svg?url"
-
+// import { one, two, three, four } from '../../assets/playgroundProjects/mtcook';
 
 import { Parallax, ParallaxLayer } from '@react-spring/parallax' 
 
@@ -17,9 +11,7 @@ const ParallaxMtCook = () => {
 
   return (
     <div className='flex h-[100vh] w-full overflow-y-scroll relative'>
-
-
-      <Parallax 
+      {/* <Parallax 
         pages={2}
         ref={containerRef}
         id="container"
@@ -32,7 +24,7 @@ const ParallaxMtCook = () => {
 
         <ParallaxLayer offset={0.2} speed={-2}>
           <div className="w-full max-w-full h-screen flex justify-end items-end" >
-            {/* <img src={five} className='w-full h-auto mb-[593px]'/> */}
+            <img src={five} className='w-full h-auto mb-[593px]'/> 
           </div>
         </ParallaxLayer>
         
@@ -73,7 +65,7 @@ const ParallaxMtCook = () => {
 
 
 
-      </Parallax>
+      </Parallax> */}
     </div>
 
   )
