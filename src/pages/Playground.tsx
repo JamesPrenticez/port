@@ -19,7 +19,7 @@ const Playground = () => {
           <Routes>
             <Route index element={<h3>Welcome to the Playground</h3>} />
             {data.map((data) => (
-              <Route path={data.slug} element={data.component} />
+              <Route key={data.id} path={data.slug} element={data.component} />
             ))}
           </Routes>
         </div>

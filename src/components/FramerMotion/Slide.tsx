@@ -14,7 +14,6 @@ export const Slide = ({ children, width = "fit-content" }: Props) => {
   const mainControls = useAnimation();
 
   useEffect(() => {
-    console.log(isInView)
     if (toggle === true) {
       mainControls.start("visible");
     } else {
