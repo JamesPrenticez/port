@@ -6,6 +6,7 @@ import Carousel from './HorizontalScroller'
 import { type ISkills } from 'models'
 import HorizontalScroller from './HorizontalScroller'
 import Title from './common/Title'
+import { HandwritingEffect } from './playground/Handwriting'
 
 const skills: ISkills[] = [
   {id: 1, name: "HTML", icon: <HTMLIcon />},
@@ -25,7 +26,8 @@ const items = ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5'];
 
 function Skills() {
   return (
-    <div className='w-full'>
+    <div className='w-full '>
+    <HorizontalScroller items={skills} direction="right" />
 
     {/* <Reveal>
       <h1 className='text-4xl text-center mb-6 font-medium text-gray-100'>
@@ -39,12 +41,40 @@ function Skills() {
       </h1>
     </Slide> */}
 
-    <Title text="Skills" />
+
+    <div className='flex items-center justify-center pt-12'>
+    {/* <Title text="Skills" /> */}
+      <HandwritingEffect />
+    </div>
+
+<div className='flex space-x-12 items-center justify-center w-full mt-6'>
+
+    <div className='rounded  text-white w-[250px] h-[400px]'>
+
+      <h1 className='text-3xl text-center'>Frontend</h1>
+      <p className='text-justify'>
+        With strong fundementals in HTML, CSS, and JavaScript, I specialize in developing vibrant and interactive user interfaces. My expertise lies in utilizing React for its dynamic, component-based architecture and employing Redux for effective and predictable state management, ensuring a seamless user experience.
+      </p>
+    </div>
+    <div className='rounded   text-white w-[250px] h-[400px]'>
+
+      <h1 className='text-3xl text-center'>Backend</h1>
+      <p className='text-justify'>
+      Focusing on robust and scalable server-side solutions, I leverage the capabilities of Flask and Express to develop fast and preformate APIs for consumption. I love having the power and utility of python on the backend particularly when working with numbers and data. Express also offers a great ecosystem with the added benifit of similifying the stack with one multipurpose language.
+      </p>
+    </div>
+    <div className='rounded  text-white w-[250px] h-[400px]'>
+      <h1 className='text-3xl text-center'>Devops</h1>
+      <p className='text-justify'>
+        In the realm of DevOps, I often turn towards serverless architectures as most appropriate for my use case. Microsoft Azure as my goto cloud provider for deploying resources and am proficent in setting up CI/CD pipelines to ensure streamlined development operations and processes.
+      </p>
+    </div>
 
 
+</div>
 
-    {/* <HorizontalScroller items={skills} direction="left" /> */}
-    <HorizontalScroller items={skills} direction="right" />
+
+    <HorizontalScroller items={skills} direction="left" />
 
     </div>
   )

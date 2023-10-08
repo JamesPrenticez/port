@@ -28,6 +28,7 @@ module.exports = {
       },
 			fontFamily: {
 				montserrat: ['Montserrat'],
+        beaurivage: ['Beau Rivage']
       },
       colors:{
         theme: {

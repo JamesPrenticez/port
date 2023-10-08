@@ -1,6 +1,7 @@
 import React from 'react'
 import TextEffect from './common/TextEffect'
 import { useRefContext } from './providers/refProvider'
+import { NavLink, Link, useLocation } from "react-router-dom";
 
 function Navbar() {
   const { projectsRef, skillsRef, hobbiesRef} = useRefContext()
@@ -20,8 +21,19 @@ function Navbar() {
         <li className="hover:text-orange-500" onClick={() => executeScroll(skillsRef)}>Skills</li>
         <li className="hover:text-orange-500" onClick={() => executeScroll(projectsRef)}>Projects</li>
         <li className="hover:text-orange-500" onClick={() => executeScroll(hobbiesRef)}>Hobbies</li>
-      </ul>
 
+        <NavLink 
+          to="/playground"
+          
+          style={({ isActive }) =>
+            isActive
+              ? { color: "green"}
+              : { color: "" }
+          }
+        >
+          <p className="hover:text-orange-500">Playground</p>
+        </NavLink>
+      </ul>
     </nav>
   )
 }
