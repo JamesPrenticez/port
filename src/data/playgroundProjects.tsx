@@ -35,14 +35,14 @@ export const data: IPlaygroundProjects[] = [
     component: <BouncyText text="Hover Me!" />,
     image: ""
   },
-  // {
-  //   id: "5",
-  //   title: "Mt Cook",
-  //   slug: "mt-cook",
-  //   desc: "",
-  //   component: <MtCook />,
-  //   image: ""
-  // },
+  {
+    id: "5",
+    title: "Mt Cook",
+    slug: "mt-cook",
+    desc: "",
+    component: <MtCook />,
+    image: ""
+  },
   {
     id: "6",
     title: "Handwriting",
