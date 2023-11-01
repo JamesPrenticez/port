@@ -4,9 +4,12 @@ export { default as Cogs } from './Cogs';
 export { default as BouncyText } from './BouncyText';
 export { default as MtCook } from './MtCook';
 export { Handwriting as Handwriting } from './Handwriting';
+export { WeirdInput as WeirdInput } from './WeirdInput';
+export { default as HorizontalScroller } from './HorizontalScroller';
+export { default as Squircle } from './Squircle';
 
 // Already done
-// [] Weird Input - https://codepen.io/ipacmanx/pen/NLeEwJ
+// [x] Weird Input - https://codepen.io/ipacmanx/pen/NLeEwJ
 // [x] Bard 
 // [] Cube -
 // [x] Cogs -
@@ -18,16 +21,19 @@ export { Handwriting as Handwriting } from './Handwriting';
 // [] Character moves
 // [] Infinite Scroll - https://github.com/JamesPrenticez/infinite-scroll
 // [] Recursive Tree - https://github.com/JamesPrenticez/tree
-// [] Isometric grid - https://github.com/JamesPrenticez/isometric
+// [o] Isometric grid - https://github.com/JamesPrenticez/isometric
 // [] Three js minecraft chest - https://github.com/JamesPrenticez/three
 // [] Ellipses
 // [x] Mt Cook Parallax
-// [] Firewatch Parallax - https://github.com/JamesPrenticez/arcade/commit/39e9b3094b28cc43e9185c71838c77363bf4789a#diff-1d8402cb1fef613d6f3026c2a376177c3c8223ed5ffa91d92f3a3eb087120623
-// [] Zhangjiajie Parallax - remove this for this https://www.youtube.com/watch?v=Yo3j_Dx4u7c
-// [x] Hand Writing Effect - https://maxwellito.github.io/vivus-instant/ | https://codepen.io/OlgaKoplik/pen/YbwLNO | https://codepen.io/simon_tw/pen/zeJKPz
-// [] projjects background -  https://codepen.io/marianarlt/details/NxWXXd
+// [o] Firewatch Parallax - https://github.com/JamesPrenticez/arcade/commit/39e9b3094b28cc43e9185c71838c77363bf4789a#diff-1d8402cb1fef613d6f3026c2a376177c3c8223ed5ffa91d92f3a3eb087120623
+// [o] Hand Writing Effect - https://maxwellito.github.io/vivus-instant/ | https://codepen.io/OlgaKoplik/pen/YbwLNO | https://codepen.io/simon_tw/pen/zeJKPz
+// [x] Squircle
+
 
 // Ideas
+// [] projjects construction crane background -  https://codepen.io/marianarlt/details/NxWXXd
+// [] Zhangjiajie Parallax - remove this for this https://www.youtube.com/watch?v=Yo3j_Dx4u7c
+// [] heat map https://github.com/JamesPrenticez/selfregulator1/blob/master/components/Heatmap.jsx
 // [] runaway button - https://codepen.io/jsonhoward-the-typescripter/pen/pogZXNB
 // buttons - https://codepen.io/yuhomyan/pen/OJMejWJ
 // crane - https://codepen.io/FiascoDesign/pen/YWaKdW

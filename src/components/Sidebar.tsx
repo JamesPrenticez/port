@@ -3,6 +3,7 @@ import React, {
   type ReactElement,
 } from "react";
 import { NavLink } from "react-router-dom";
+import { ArrowBackIcon } from "./icons";
 
 
 interface item {
@@ -25,10 +26,24 @@ const Sidebar = ({title, items}: Props): ReactElement => {
     >
         <div className="w-full">
           {/* MENU TITLE & COLLAPSE TOGGLE */}
-          <div className="flex items-center pt-[5px] ml-[15px] mb-4">
+
+          
+          <div className="pt-[5px] ml-[15px] mb-4">
+
+            <NavLink to="/">
+              <button className="text-blue-600 hover:underline font-medium flex space-x-[4px]">
+                <ArrowBackIcon/> 
+                <p>back</p>
+              </button>
+            </NavLink>
+
             <h3 className="text-4xl hidden font-black text-fuchsia-500 md:flex">
               {title}
             </h3>
+
+
+
+ 
             {/* <Box margin={`${sidebarOpen ? "0 auto" : "0 0 0 auto"}`}>
               <IconButton
                 onClick={() => {
@@ -40,6 +55,8 @@ const Sidebar = ({title, items}: Props): ReactElement => {
               </IconButton>
             </Box> */}
           </div>
+
+
 
           {/* NAVIGATION ITEMS */}
           {items?.map((item, index) => (
