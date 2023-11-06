@@ -1,10 +1,10 @@
 import React, { useRef, useState, useEffect, useMemo } from 'react';
-import useCanvas from '../hooks/useCanvas';
-import useMousePosition from '../hooks/useMousePosition';
+import useCanvas from '../../hooks/useCanvas';
+import useMousePosition from '../../hooks/useMousePosition';
 
 interface Props {
   img: string;
-  bgcolor: string;
+  bgcolor?: string;
   height: number;
   width: number;
 }
@@ -148,7 +148,7 @@ const ParticleImage = ({
   };
   
   return (
-    <div ref={parentRef} className='w-full absolute top-0 bottom-0'>
+    <div ref={parentRef} className=''>
       <canvas 
         ref={canvasRef}
         width={canvasDimensions.width} height={canvasDimensions.height}

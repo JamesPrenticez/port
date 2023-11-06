@@ -7,6 +7,8 @@ export { Handwriting as Handwriting } from './Handwriting';
 export { WeirdInput as WeirdInput } from './WeirdInput';
 export { default as HorizontalScroller } from './HorizontalScroller';
 export { default as Squircle } from './Squircle';
+export { default as ParticleImage } from './ParticleImage';
+export { default as Waves } from './Wave';
 
 // Already done
 // [x] Weird Input - https://codepen.io/ipacmanx/pen/NLeEwJ
@@ -18,6 +20,8 @@ export { default as Squircle } from './Squircle';
 // [x] Hungy Catapiller
 // [] Self Driving Car - https://github.com/JamesPrenticez/self-driving-car
 // [] Particle Text Effect
+// [] Particle Image Effect
+// [x] Wave 
 // [] Character moves
 // [] Infinite Scroll - https://github.com/JamesPrenticez/infinite-scroll
 // [] Recursive Tree - https://github.com/JamesPrenticez/tree

@@ -23,7 +23,7 @@ const BODY5COLOR = "#205a32";
 const BODY6COLOR = "#0493b5";
 
 const SplashScreen = (): ReactElement => {
-  const [animation, setAnimation] = useState('passive');
+  const [animation, setAnimation] = useState('typing');
   const [armPathL, setArmPathL] = useState<string>("");
   const [armPathR, setArmPathR] = useState<string>("");
 

@@ -4,22 +4,30 @@ import { DndContext, closestCenter, PointerSensor, useSensor, useSensors } from 
 import { SortableContext, useSortable, rectSortingStrategy, arrayMove } from "@dnd-kit/sortable";
 
 import { ISkills } from "@models";
-import { AzureIcon, CSSIcon, FlaskIcon, GitIcon, HTMLIcon, JSIcon, NodeIcon, PythonIcon, ReactIcon, ReduxIcon, SQLIcon, TwindIcon } from "./icons";
+import { AEMIcon, AzureIcon, BashIcon, CSSIcon, ExpressIcon, FlaskIcon, GitIcon, HTMLIcon, JSIcon, JestIcon, MUIIcon, MongoDBIcon, NodeIcon, PythonIcon, ReactIcon, ReduxIcon, SQLIcon, TSIcon, TwindIcon } from "./icons";
 import { Squircle } from "./playground";
+import TextEffect from "./common/TextEffect";
 
 export const skills: ISkills[] = [
-  { id: 1, title: "HTML", icon: <HTMLIcon /> },
-  { id: 2, title: "CSS", icon: <CSSIcon /> },
-  { id: 3, title: "Javascript", icon: <JSIcon /> },
-  { id: 4, title: "React", icon: <ReactIcon /> },
-  { id: 5, title: "Redux", icon: <ReduxIcon /> },
-  { id: 6, title: "Tailwind", icon: <TwindIcon /> },
-  { id: 7, title: "Python", icon: <PythonIcon /> },
-  { id: 8, title: "Flask", icon: <FlaskIcon /> },
-  { id: 9, title: "T-SQL", icon: <SQLIcon /> },
-  { id: 10, title: "Azure", icon: <AzureIcon /> },
-  { id: 11, title: "NodeJS", icon: <NodeIcon />},
-  { id: 12, title: "GIT", icon: <GitIcon /> },
+  { id: 1, title: "HTML", tags: ["frontend"], icon: <HTMLIcon /> },
+  { id: 2, title: "CSS", tags: ["frontend"], icon: <CSSIcon /> },
+  { id: 3, title: "Javascript", tags: ["frontend"], icon: <JSIcon /> },
+  { id: 4, title: "Typescript", tags: ["frontend"], icon: <TSIcon /> },
+  { id: 5, title: "React", tags: ["frontend"], icon: <ReactIcon /> },
+  { id: 6, title: "Redux", tags: ["frontend"], icon: <ReduxIcon /> },
+  { id: 7, title: "Tailwind", tags: ["frontend"], icon: <TwindIcon /> },
+  { id: 8, title: "Python", tags: ["backend"], icon: <PythonIcon /> },
+  { id: 9, title: "Flask", tags: ["backend"], icon: <FlaskIcon /> },
+  { id: 10, title: "T-SQL", tags: ["backend"], icon: <SQLIcon /> },
+  { id: 11, title: "Azure", tags: ["infrastructure"], icon: <AzureIcon /> },
+  { id: 12, title: "NodeJS", tags: ["infrastructure"], icon: <NodeIcon />},
+  { id: 13, title: "GIT", tags: ["infrastructure"], icon: <GitIcon /> },
+  { id: 14, title: "AEM", tags: ["frontend", "backend"], icon: <AEMIcon /> },
+  { id: 15, title: "Bash", tags: ["infrastructure"], icon: <BashIcon /> },
+  { id: 16, title: "MUI", tags: ["frontend"], icon: <MUIIcon /> },
+  { id: 17, title: "Express", tags: ["backend"], icon: <ExpressIcon /> },
+  { id: 18, title: "Jest", tags: ["frontend", "backend"], icon: <JestIcon />},
+  // { id: 19, title: "Mongo DB", icon: <MongoDBIcon /> },
 ]
 
 function Item(props) {
@@ -76,10 +84,10 @@ function Item(props) {
           roundness={0.25}
           shadow={isDragging ? "drop-shadow(0 0 0.75rem rgb(56 189 248) )" : ""}
         >
-        <div className="h-full w-full flex flex-col items-center justify-center relative">
-          <div className="h-1/2 w-1/2">{icon}</div>
-          <div className="absolute bottom-[15px] font-medium text-[#f9fafbCC]">{title}</div>
-        </div>
+          <div className="h-full w-full flex flex-col items-center justify-center relative">
+            <div className="h-1/2 w-1/2">{icon}</div>
+            <div className="absolute bottom-[15px] font-medium text-[#f9fafbCC] text-center whitespace-normal">{title}</div>
+          </div>
         </Squircle>
       </motion.li>
     );
@@ -92,26 +100,17 @@ function Skills(): ReactElement {
     const sensors = useSensors(useSensor(PointerSensor));
 
     function handleDragStart({ active }){
-        //console.log(active);
         setActiveId(active.id);
     }
 
     function handleDragEnd({ over }){
-        //console.log(over)
-        // const a = items.findIndex((item) => item.id === activeId);
-        // const b = items.findIndex((item) => item.id === over.id)
-        setItems((items) => arrayMove(items, items.findIndex((item) => item.id === activeId), items.findIndex((item) => item.id === over.id)))
-        setActiveId(null);
+      setItems((items) => arrayMove(items, items.findIndex((item) => item.id === activeId), items.findIndex((item) => item.id === over.id)))
+      setActiveId(null);
     }
 
-      // For string
     function sort() {
-      // let sortedArrayOfItems = [...items].sort((a, b) => { return a.id - b.id }); // for number
       let sortedArrayOfItems = [...items].sort((a, b) => { return a.id - b.id }); // for number
-      // let sortedArrayOfItems = items.slice().sort((a, b) => a.id.localeCompare(b.id)); // for lexicographic aka abcdef
-      // let sortedArrayOfItems = items.slice().sort((a, b) => parseInt(a.id, 10) - parseInt(b.id, 10)); // for number as string
       setItems(sortedArrayOfItems)
-      console.log(sortedArrayOfItems)
     }
 
     function shuffle(){
@@ -119,21 +118,38 @@ function Skills(): ReactElement {
       setItems((items) => arrayMove(items, items.findIndex((item) => item.id), shuffledArrayOfItems.findIndex((item) => item.id)))
     }
 
-    return (<>
-    <div className="flex items-center justify-center space-x-2 w-full bg-blue-600">
+    return (
+    
+    <div className="flex flex-col grow ">
 
-      <button className="!bg-orange-500 !text-white font-bold w-24 p-x-2 py-2 rounded-sm" onClick={() => sort()}>
-        Sort
-      </button>
-      <button className="!bg-yellow-500 !text-white font-bold w-24 p-x-2 py-2 rounded-sm" onClick={() => shuffle()}>
-        Shuffle
-      </button>
+      <div className="flex items-center px-16 bg-blue-00 py-8">
+        <TextEffect text="Technologies"/>
 
-    </div>
-      <div className="flex justify-center items-center w-full border-box p-4">
-        <DndContext collisionDetection={closestCenter} sensors={sensors} onDragStart={handleDragStart} onDragEnd={handleDragEnd}>
+        <div className="text-gray-50/80 font-bold text-lg ml-auto space-x-2 ">
+          <button className="bg-lue-700 border-gray-50/80 hover:bg-blue-800 hover:border-blue-800 hover:text-white  border-2 w-24 py-4 rounded-lg" onClick={() => sort()}>
+            Sort
+          </button>
+          <button className="bg-lue-700 border-gray-50/80 hover:bg-blue-800 hover:border-blue-800 hover:text-white border-2 w-24 py-4 rounded-lg" onClick={() => shuffle()}>
+            Shuffle
+          </button>
+
+          <button className="bg-lue-700 border-gray-50/80 hover:bg-blue-800 hover:border-blue-800 hover:text-white border-2 w-24 py-4 rounded-lg" onClick={() => shuffle()}>
+            Frontend
+          </button>
+        </div>
+
+      </div>
+
+      <div className="flex justify-center items-center grow">
+        <DndContext 
+          collisionDetection={closestCenter}
+          sensors={sensors}
+          onDragStart={handleDragStart}
+          onDragEnd={handleDragEnd}
+          autoScroll={false}
+        >
           <SortableContext strategy={rectSortingStrategy} items={items}>
-          <ul className="grid grid-cols-4 gap-4 p-4">
+          <ul className="grid grid-cols-6 gap-4">
                   {items.map((item, index) => (
                       <Item
                         id={item.id}
@@ -146,7 +162,8 @@ function Skills(): ReactElement {
           </SortableContext>
         </DndContext>
       </div>
-    </>
+
+    </div>
   )
 }
 

@@ -4,4 +4,5 @@ export interface ISkills {
   id: number;
   title: string;
   icon: ReactNode;
+  tags: string[];
 }

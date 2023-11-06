@@ -116,6 +116,7 @@ const WeirdInputEffect: React.FC<WeirdInputProps> = ({ name, id, value, onInput 
         autoComplete="off"
         value={value}
         onChange={handleChange}
+        placeholder='Type something...'
       />
       <label 
         htmlFor={inputId}
