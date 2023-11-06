@@ -6,7 +6,7 @@ import GridDnD from './GridDnD/GridDnD'
 function ProjectsSummary() {
   return (
     <div className='w-full'>
-      <Title text="Projects Summary" />
+      <Title text="Projects" />
 
       
 

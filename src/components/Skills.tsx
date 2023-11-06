@@ -7,6 +7,7 @@ import { ISkills } from "@models";
 import { AEMIcon, AzureIcon, BashIcon, CSSIcon, ExpressIcon, FlaskIcon, GitIcon, HTMLIcon, JSIcon, JestIcon, MUIIcon, MongoDBIcon, NodeIcon, PythonIcon, ReactIcon, ReduxIcon, SQLIcon, TSIcon, TwindIcon } from "./icons";
 import { Squircle } from "./playground";
 import TextEffect from "./common/TextEffect";
+import useMediaQuery from "@hooks/useMediaQuery";
 
 export const skills: ISkills[] = [
   { id: 1, title: "HTML", tags: ["frontend"], icon: <HTMLIcon /> },
@@ -37,14 +38,16 @@ function Item(props) {
         transition: null
     });
 
+    const { isSm, isMd, isLg, isXl } = useMediaQuery();
+
     return (
       <motion.li 
-        className="flex relative flex-grow-1 items-center p-4 bg-transparent text-white outline-none rounded-lg border-box list-none whitespace-nowrap transform"
+        className="flex relative flex-grow-1 items-center bg-transparent text-white outline-none rounded-lg border-box list-none whitespace-nowrap transform"
         style={{
           touchAction: 'none',
           position: 'relative',
-          height: 200,
-          width: 200,
+          // height: 200,
+          // width: 200,
         }}
         ref={setNodeRef}
         tabIndex={0}
@@ -77,16 +80,15 @@ function Item(props) {
         {...attributes}
         {...listeners}
       >
-        {/* {JSON.stringify(isDragging)} */}
         <Squircle 
-          width={160}
+          width={ isSm ? 100 : isMd ? 100 : isLg ? 170 : 170}
           bgcolor= " #2c5ec0" // "#468df7"//" #1e3a8a80" //"#f9fafbCC"
           roundness={0.25}
           shadow={isDragging ? "drop-shadow(0 0 0.75rem rgb(56 189 248) )" : ""}
         >
           <div className="h-full w-full flex flex-col items-center justify-center relative">
-            <div className="h-1/2 w-1/2">{icon}</div>
-            <div className="absolute bottom-[15px] font-medium text-[#f9fafbCC] text-center whitespace-normal">{title}</div>
+            <div className="h-1/2 w-1/2 mb-2">{icon}</div>
+            <div className="absolute bottom-[2px] lg:bottom-[15px] font-medium text-[#f9fafbCC] text-center whitespace-normal">{title}</div>
           </div>
         </Squircle>
       </motion.li>
@@ -95,7 +97,8 @@ function Item(props) {
 
 function Skills(): ReactElement {    
     const [items, setItems] = useState(skills)
-    const [activeId, setActiveId] = useState(null)//being dragged
+    const [activeId, setActiveId] = useState(null)
+    const [filteredIds, setFilteredIds] = useState([])
 
     const sensors = useSensors(useSensor(PointerSensor));
 
@@ -118,25 +121,28 @@ function Skills(): ReactElement {
       setItems((items) => arrayMove(items, items.findIndex((item) => item.id), shuffledArrayOfItems.findIndex((item) => item.id)))
     }
 
+    function addToFilteredIds(word){
+      let newArrayOfItems = items.filter(item => item.tags.includes(word) === false)
+      let newArrayOfItemIds = newArrayOfItems.map(item => item.id)
+      setFilteredIds(newArrayOfItemIds)
+    }
+
     return (
     
     <div className="flex flex-col grow ">
 
-      <div className="flex items-center px-16 bg-blue-00 py-8">
+      <div className="block lg:flex items-center px-16 bg-blue-00 pt-8">
         <TextEffect text="Technologies"/>
 
-        <div className="text-gray-50/80 font-bold text-lg ml-auto space-x-2 ">
-          <button className="bg-lue-700 border-gray-50/80 hover:bg-blue-800 hover:border-blue-800 hover:text-white  border-2 w-24 py-4 rounded-lg" onClick={() => sort()}>
-            Sort
-          </button>
-          <button className="bg-lue-700 border-gray-50/80 hover:bg-blue-800 hover:border-blue-800 hover:text-white border-2 w-24 py-4 rounded-lg" onClick={() => shuffle()}>
+        {/* <div className="text-gray-50/80 font-bold text-[16px] ml-auto space-x-2 ">
+ 
+          <button className="bg-lue-700 border-blue-900/80 hover:bg-blue-800 hover:border-blue-800 hover:text-white border-2 w-24 py-[0.75rem] rounded-lg" onClick={() => shuffle()}>
             Shuffle
           </button>
-
-          <button className="bg-lue-700 border-gray-50/80 hover:bg-blue-800 hover:border-blue-800 hover:text-white border-2 w-24 py-4 rounded-lg" onClick={() => shuffle()}>
-            Frontend
+          <button className="bg-lue-700 border-blue-800/80 hover:bg-blue-800 hover:border-blue-800 hover:text-white  border-2 w-24 py-[0.75rem] rounded-lg" onClick={() => sort()}>
+            Sort
           </button>
-        </div>
+        </div> */}
 
       </div>
 
@@ -149,8 +155,16 @@ function Skills(): ReactElement {
           autoScroll={false}
         >
           <SortableContext strategy={rectSortingStrategy} items={items}>
-          <ul className="grid grid-cols-6 gap-4">
-                  {items.map((item, index) => (
+          <ul className="grid grid-cols-3 lg:grid-cols-6 gap-[20px] lg:gap-4">
+                  {items
+                  
+                  .filter(
+                    item =>
+                    !filteredIds.includes(item.id)
+                  )
+                  
+                  .map((item, index) => (
+                    
                       <Item
                         id={item.id}
                         key={item.id}
@@ -161,11 +175,24 @@ function Skills(): ReactElement {
               </ul>
           </SortableContext>
         </DndContext>
-      </div>
+                  </div>
 
     </div>
   )
 }
 
 export default Skills
+
+//  <button className="bg-lue-700 border-gray-50/80 hover:bg-blue-800 hover:border-blue-800 hover:text-white border-2 w-24 py-[0.75rem] rounded-lg" onClick={() => addToFilteredIds('frontend')}>
+//     Frontend
+//   </button>
+//   <button className="bg-lue-700 border-gray-50/80 hover:bg-blue-800 hover:border-blue-800 hover:text-white border-2 w-24 py-[0.75rem] rounded-lg" onClick={() => addToFilteredIds('backend')}>
+//     Backend
+//   </button>
+//   <button className="bg-lue-700 border-gray-50/80 hover:bg-blue-800 hover:border-blue-800 hover:text-white border-2 w-36 py-[0.75rem] rounded-lg" onClick={() => addToFilteredIds('infrastructure')}>
+//     Infrastructure
+//   </button>
+//   <button className="bg-lue-700 border-gray-50/80 hover:bg-blue-800 hover:border-blue-800 hover:text-white border-2 w-24 py-[0.75rem] rounded-lg" onClick={() => setFilteredIds([])}>
+//     Show All
+//   </button>
 // https://github.com/JamesPrenticez/component-storage/blob/master/components/DNDFramerMotionGrid/DNDFramerMotionGrid.jsx
