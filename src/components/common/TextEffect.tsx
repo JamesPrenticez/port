@@ -21,7 +21,7 @@ function TextEffect({
     <div 
       className="relative text-4xl md:text-7xl font-extrabold whitespace-nowrap"
       style={{
-        fontSize: isSm ? 46 : isMd ? 50 : isLg ? 24 : 24
+        fontSize: isSm ? 46 : isMd ? 50 : isLg ? 100 : 100
       }}
     >
       <h1 

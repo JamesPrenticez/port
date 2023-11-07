@@ -16,6 +16,8 @@ import {
   Waves
 } from "@components/playground"
 import ParticleImage from '@components/playground/ParticleImage';
+import TextEffect from '@components/common/TextEffect';
+import TextEffect2 from '@components/common/TextEffect2';
 
 
 export const data: IPlaygroundProjects[] = [
@@ -132,6 +134,34 @@ export const data: IPlaygroundProjects[] = [
     component: <Cogs />,
     image: ""
   },
+  {
+    id: "11",
+    title: "Text Effect 1",
+    slug: "text-effect-1",
+    desc: "",
+    component: 
+    <Wrapper className="bg-violet-700 flex-col gap-4">
+      <TextEffect color1="#5c8ba1" color2="#8ec8e3" text='The' />
+      <TextEffect color1="#cbb76e" color2="#fee99b" text='quick' />
+      <TextEffect color1="#b5666f" color2="#f79196" text='brown' />
+      <TextEffect color1="#648f7d" color2="#96dab4" text='fox!' />
+    </Wrapper>,
+    image: ""
+  },
+  {
+    id: "12",
+    title: "Text Effect 2",
+    slug: "text-effect-2",
+    desc: "",
+    component: 
+    <Wrapper className="bg-gray-100 flex-col gap-4">
+      <TextEffect2 color1="#1d4ed8" color2="#2563eb" color3="#3b82f6" color4="#60a5fa" color5="#93c5fd" color6="#bfdbfe" color7="#dbeafe" text='The' />
+      <TextEffect2 color1="#4338ca " color2="#4f46e5 " color3="#6366f1 " color4="#818cf8 " color5="#a5b4fc " color6="#c7d2fe " color7="#e0e7ff" text='quick' />
+      <TextEffect2 color1="#7e22ce" color2="#9333ea" color3="#a855f7" color4="#c084fc" color5="#d8b4fe" color6="#e9d5ff" color7="#e9d5ff" text='brown' />
+      <TextEffect2 color1="#a21caf " color2="#c026d3 " color3="#d946ef " color4="#e879f9 " color5="#f0abfc " color6="#fae8ff " color7="#fae8ff " text='fox!' />
+    </Wrapper>,
+    image: ""
+  },
   // {
   //   id: "",
   //   title: "",
@@ -145,9 +175,9 @@ export const data: IPlaygroundProjects[] = [
 ]
 
 
-function Wrapper({ children }: { children: ReactNode}){
+function Wrapper({ children, className }: { children: ReactNode, className?: string; }){
   return (
-    <div className="bg-gray-50 flex w-full items-center justify-center">
+    <div className={`bg-gray-50 flex w-full items-center justify-center ${className}`}>
       {children}
     </div>
   );
