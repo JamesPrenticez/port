@@ -1,5 +1,3 @@
-import { Item } from "@components/Grid/Grid"
-
 import { teatime0, teatime1, teatime2, teatime3, teatime4 } from '../assets/projects/teatime';
 import { egyptian0, egyptian1, egyptian2, egyptian3, egyptian4 } from '../assets/projects/egyptian';
 import { ecom0, ecom1, ecom2, ecom3 } from '../assets/projects/ecom';
@@ -12,6 +10,7 @@ import { algo0 } from '../assets/projects/algo';
 import egyptian from '../assets/projects/egyptian.avif';
 import blog from '../assets/projects/blog.avif';
 import selfreg from '../assets/projects/selfreg.avif';
+import { type Item } from '@components/Projects/ProjectsGrid';
 
 export const projects: Item[] = [
   {
