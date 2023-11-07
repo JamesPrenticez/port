@@ -17,14 +17,13 @@ export interface Item {
   color: string;
 }
 
-function Grid(): ReactElement {
-    const [items, setItems] = useState(data)
+function ProjectsGrid(): ReactElement {
     const [selectedId, setSelectedId] = useState<string | null>(null) // to open modal
 
     return (
-      <div className="flex justify-center items-center pt-4">
-        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4 max-w-7xl ">
-          {items.map((item) => (
+      <div className="bg-red-500">
+        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4 max-w-10xl ">
+          {data.map((item) => (
             <AnimatePresence key={item.id}>
               <Card
                 selectedId={selectedId}
@@ -41,15 +40,14 @@ function Grid(): ReactElement {
             <Modal
               selectedId={selectedId}
               setSelectedId={setSelectedId}
-              item={items.find(item => item.id === selectedId)}
+              item={data.find(item => item.id === selectedId)}
             />
           </AnimatePresence>
-
         )}
       </div>
   )
 }
 
-export default Grid
+export default ProjectsGrid
 
 // https://github.com/JamesPrenticez/component-storage/blob/master/components/DNDFramerMotionGrid/DNDFramerMotionGrid.jsx

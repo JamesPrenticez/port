@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import defaultImage from '../../assets/default.webp';
 import { motion, useAnimation } from "framer-motion";
-import { Item } from "./Grid";
+import { Item } from "./ProjectsGrid";
 
 interface Props {
   selectedId: string;

@@ -23,14 +23,14 @@ const Home = () => {
           <Hero />
         </Section>
 
-        {/* Skills */}
-        <Section ref={skillsRef} className="bg-blue-500">
-          <Skills />
-        </Section>
-
         {/* Portfolio */}
         <Section ref={projectsRef} className="bg-blue-700">
           <ProjectsSummary />
+        </Section>
+
+        {/* Skills */}
+        <Section ref={skillsRef} className="bg-blue-500">
+          <Skills />
         </Section>
 
         {/* Hobbies */}

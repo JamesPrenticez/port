@@ -1,7 +1,7 @@
 import React, {useRef, useState, type Dispatch, type SetStateAction, useEffect} from "react";
 import { CrossIcon } from "@components/icons";
 import { AnimatePresence, motion } from "framer-motion";
-import { type Item } from "./Grid";
+import { type Item } from "./ProjectsGrid";
 import defaultImage from '../../assets/projects/default.avif';
 import useClickAwayListener from "@hooks/events/useClickAwayListener";
 import { useRefContext } from "@components/providers/refProvider";

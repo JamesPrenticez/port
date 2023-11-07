@@ -2,7 +2,6 @@ export { default as Bard } from './Bard';
 export { default as HungryCaterpiller } from './HungryCaterpiller';
 export { default as Cogs } from './Cogs';
 export { default as BouncyText } from './BouncyText';
-export { default as MtCook } from './MtCook';
 export { Handwriting as Handwriting } from './Handwriting';
 export { WeirdInput as WeirdInput } from './WeirdInput';
 export { default as HorizontalScroller } from './HorizontalScroller';
@@ -28,7 +27,6 @@ export { default as Waves } from './Wave';
 // [o] Isometric grid - https://github.com/JamesPrenticez/isometric
 // [] Three js minecraft chest - https://github.com/JamesPrenticez/three
 // [] Ellipses
-// [x] Mt Cook Parallax
 // [o] Firewatch Parallax - https://github.com/JamesPrenticez/arcade/commit/39e9b3094b28cc43e9185c71838c77363bf4789a#diff-1d8402cb1fef613d6f3026c2a376177c3c8223ed5ffa91d92f3a3eb087120623
 // [o] Hand Writing Effect - https://maxwellito.github.io/vivus-instant/ | https://codepen.io/OlgaKoplik/pen/YbwLNO | https://codepen.io/simon_tw/pen/zeJKPz
 // [x] Squircle

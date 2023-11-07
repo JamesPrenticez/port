@@ -10,7 +10,7 @@ import { Slide } from '@components/FramerMotion/Slide';
 function Hero(): ReactElement{
   return (
     <div className='flex-grow flex flex-col'>
-    <div className='flex-grow flex flex-col-reverse justify-end md:flex-row pt-[5rem] md:pt-[5rem] max-w-[100rem] mx-auto'>
+    <div className='flex-grow flex flex-col-reverse justify-end md:flex-row pt-[5rem] md:pt-[5rem] max-w-[95rem] mx-auto'>
       <div className='text-gray-100 py-5 px-6 text-sm sm:text-xl md:text-3xl font-medium'>
           <div className='leading-[1.5rem] md:leading-[3.25rem]'>
             <span className='text-orange-400 text-2xl md:text-4xl font-bold'>Hello!</span>
