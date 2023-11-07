@@ -1,5 +1,5 @@
 import React, { useEffect, type ReactElement } from 'react';
-import { type ISkills } from 'models';
+import { type ISkills } from '@models';
 
 interface CarouselProps {
   items: ISkills[];
@@ -50,7 +50,7 @@ function HorizontalScroller ({ items, direction }): ReactElement {
       {items.map((skill) => (
         <div 
           key={skill.id}
-          className='inline-block h-24 w-24 p-2 mx-8 //bg-blue-50 //border-2'
+          className='inline-block h-32 w-32 mx-8'
         >
           {skill.icon}
         </div>
@@ -67,7 +67,6 @@ function HorizontalScroller ({ items, direction }): ReactElement {
       className="
         relative
         overflow-x-hidden
-        bg-gray-50/80 
         py-2
         whitespace-nowrap
         //[&>div]:hover:pause-animation

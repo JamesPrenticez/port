@@ -1,9 +1,7 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { data } from '../data/playgroundProjects';
-import { Button } from '@components/common/Button';
 import Sidebar from '@components/Sidebar';
-import { Bard } from '@components/playground';
 
 const Playground = () => {
   return (

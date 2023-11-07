@@ -12,18 +12,17 @@ html {
 
 ::-webkit-scrollbar {
   height: 5px;
-  width: 5px;
-  /* background: var(--background); */
-  background: linear-gradient(180deg, #91f 0%, #40f 100%);
+  width: 8px;
+  background:  rgb(30 58 138);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #40f;
+  background: linear-gradient(180deg, #f87537 0%, #fba81f 100%);
   -webkit-border-radius: 1ex;
 }
 
 ::-webkit-scrollbar-corner {
-  background: linear-gradient(180deg, #91f 0%, #40f 100%);
+  background: linear-gradient(180deg, #f87537 0%, #fba81f 100%);
   /* background: var(--background); */
 }
 
