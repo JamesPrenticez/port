@@ -8,7 +8,6 @@ import {
   Cogs,
   HungryCaterpiller,
   BouncyText,
-  MtCook,
   Handwriting,
   WeirdInput,
   Squircle,
