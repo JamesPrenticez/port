@@ -23,6 +23,7 @@ const App = (): ReactElement => {
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/playground/*" element={<Playground />} />
+          <Route path="/about" element={<About />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       {/* </Layout> */}

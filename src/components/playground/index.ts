@@ -8,6 +8,8 @@ export { default as HorizontalScroller } from './HorizontalScroller';
 export { default as Squircle } from './Squircle';
 export { default as ParticleImage } from './ParticleImage';
 export { default as Waves } from './Wave';
+export { default as StripeNavbar } from './StripeNavbar';
+export { default as TransparentTextEffect } from './TransparentTextEffect';
 
 // Already done
 // [x] Weird Input - https://codepen.io/ipacmanx/pen/NLeEwJ
@@ -30,6 +32,8 @@ export { default as Waves } from './Wave';
 // [o] Firewatch Parallax - https://github.com/JamesPrenticez/arcade/commit/39e9b3094b28cc43e9185c71838c77363bf4789a#diff-1d8402cb1fef613d6f3026c2a376177c3c8223ed5ffa91d92f3a3eb087120623
 // [o] Hand Writing Effect - https://maxwellito.github.io/vivus-instant/ | https://codepen.io/OlgaKoplik/pen/YbwLNO | https://codepen.io/simon_tw/pen/zeJKPz
 // [x] Squircle
+// [x] StripeNavbar
+// [x] TransparentTextEffect
 
 
 // Ideas

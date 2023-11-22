@@ -1,4 +1,4 @@
-import React, { type ReactNode } from 'react'
+import React, { HTMLProps, type ReactNode } from 'react'
 import { type IPlaygroundProjects } from "@models";
 import { skills } from '@components/Skills';
 import { dog } from '../assets/playgroundProjects';
@@ -12,7 +12,9 @@ import {
   WeirdInput,
   Squircle,
   HorizontalScroller,
-  Waves
+  Waves,
+  StripeNavbar,
+  TransparentTextEffect
 } from "@components/playground"
 import ParticleImage from '@components/playground/ParticleImage';
 import TextEffect from '@components/common/TextEffect';
@@ -161,6 +163,34 @@ export const data: IPlaygroundProjects[] = [
     </Wrapper>,
     image: ""
   },
+  {
+    id: "13",
+    title: "Stripe Navbar",
+    slug: "stripe-navbar",
+    desc: "",
+    component: 
+     <Wrapper style={{
+        background: "url(https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcS6lVlC0W5dY4GfoGvqJ86XbRFn3duerPndM79mko3-eC6MHBhBa2jVMGETn1_7xQUt) center center no-repeat",
+        backgroundSize: "cover",
+        width: "100%",
+        height: "100vh",
+        overflow: "hidden"
+     }}>
+        <StripeNavbar /> 
+     </Wrapper>,
+    image: ""
+  },
+  {
+    id: "14",
+    title: "Transparent Text Effect",
+    slug: "transparent-text-effect",
+    desc: "",
+    component: 
+     <Wrapper>
+        <TransparentTextEffect text="transparent" /> 
+     </Wrapper>,
+    image: ""
+  },
   // {
   //   id: "",
   //   title: "",
@@ -173,8 +203,12 @@ export const data: IPlaygroundProjects[] = [
   // },
 ]
 
+interface WrapperProps extends HTMLProps<HTMLDivElement> {
+  className?: string;
+  children: ReactNode;
+}
 
-function Wrapper({ children, className }: { children: ReactNode, className?: string; }){
+function Wrapper({ children, className }: WrapperProps){
   return (
     <div className={`bg-gray-50 flex w-full items-center justify-center ${className}`}>
       {children}
