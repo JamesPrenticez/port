@@ -4,6 +4,7 @@ import { skills } from '@components/Skills';
 import { dog } from '../assets/playgroundProjects';
 
 import {
+  FormValidation,
   Bard,
   Cogs,
   HungryCaterpiller,
@@ -14,7 +15,9 @@ import {
   HorizontalScroller,
   Waves,
   StripeNavbar,
-  TransparentTextEffect
+  TransparentTextEffect,
+  NextLevelIcons,
+  Cube
 } from "@components/playground"
 import ParticleImage from '@components/playground/ParticleImage';
 import TextEffect from '@components/common/TextEffect';
@@ -23,6 +26,28 @@ import TextEffect2 from '@components/common/TextEffect2';
 
 export const data: IPlaygroundProjects[] = [
 
+  {
+    id: "0",
+    title: "Form Validation",
+    slug: "form-validation",
+    desc: "",
+    component: 
+    <Wrapper>
+        <FormValidation /> 
+    </Wrapper>,
+    image: ""
+  },
+  {
+    id: "16",
+    title: "Cube",
+    slug: "cube",
+    desc: "",
+    component: 
+    <Wrapper>
+      <Cube className={"flex justify-center"} width={150} height={150} autoPlay={true} />
+    </Wrapper>,
+    image: ""
+  },
   {
     id: "1",
     title: "Particles",
@@ -186,8 +211,19 @@ export const data: IPlaygroundProjects[] = [
     slug: "transparent-text-effect",
     desc: "",
     component: 
-     <Wrapper>
+     <Wrapper className='bg-gradient-to-r from-[#d946ef] via-[#f43f5e] to-[#facc15]'>
         <TransparentTextEffect text="transparent" /> 
+     </Wrapper>,
+    image: ""
+  },
+  {
+    id: "15",
+    title: "Next Level Icons",
+    slug: "next-level-icons",
+    desc: "",
+    component: 
+     <Wrapper className='!bg-black'> 
+      <NextLevelIcons />
      </Wrapper>,
     image: ""
   },

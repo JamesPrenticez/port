@@ -10,18 +10,22 @@ export { default as ParticleImage } from './ParticleImage';
 export { default as Waves } from './Wave';
 export { default as StripeNavbar } from './StripeNavbar';
 export { default as TransparentTextEffect } from './TransparentTextEffect';
+export { default as NextLevelIcons } from './NextLevelIcons';
+export { default as Cube } from './Cube';
+export * from './FormValidation';
 
 // Already done
+// [x] Custom Forms with UI components
 // [x] Weird Input - https://codepen.io/ipacmanx/pen/NLeEwJ
 // [x] Bard 
-// [] Cube -
+// [x] Cube -
 // [x] Cogs -
 // [] Timer - 
 // [x] Bounce Text Effect -
 // [x] Hungy Catapiller
 // [] Self Driving Car - https://github.com/JamesPrenticez/self-driving-car
 // [] Particle Text Effect
-// [] Particle Image Effect
+// [x] Particle Image Effect
 // [x] Wave 
 // [] Character moves
 // [] Infinite Scroll - https://github.com/JamesPrenticez/infinite-scroll
@@ -30,7 +34,7 @@ export { default as TransparentTextEffect } from './TransparentTextEffect';
 // [] Three js minecraft chest - https://github.com/JamesPrenticez/three
 // [] Ellipses
 // [o] Firewatch Parallax - https://github.com/JamesPrenticez/arcade/commit/39e9b3094b28cc43e9185c71838c77363bf4789a#diff-1d8402cb1fef613d6f3026c2a376177c3c8223ed5ffa91d92f3a3eb087120623
-// [o] Hand Writing Effect - https://maxwellito.github.io/vivus-instant/ | https://codepen.io/OlgaKoplik/pen/YbwLNO | https://codepen.io/simon_tw/pen/zeJKPz
+// [x] Hand Writing Effect - https://maxwellito.github.io/vivus-instant/ | https://codepen.io/OlgaKoplik/pen/YbwLNO | https://codepen.io/simon_tw/pen/zeJKPz
 // [x] Squircle
 // [x] StripeNavbar
 // [x] TransparentTextEffect

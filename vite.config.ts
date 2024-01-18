@@ -23,6 +23,7 @@ export default defineConfig({
         { find: '@components', replacement: '/src/components' },
         { find: '@hooks', replacement: '/src/hooks' },
         { find: '@assets', replacement: '/src/assets' },
+        { find: '@lib', replacement: '/src/lib' },
       ],
     }),
   ],
