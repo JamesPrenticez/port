@@ -16,7 +16,7 @@ import {
   Waves,
   StripeNavbar,
   TransparentTextEffect,
-  NextLevelIcons,
+  // NextLevelIcons,
   Cube
 } from "@components/playground"
 import ParticleImage from '@components/playground/ParticleImage';
@@ -216,17 +216,17 @@ export const data: IPlaygroundProjects[] = [
      </Wrapper>,
     image: ""
   },
-  {
-    id: "15",
-    title: "Next Level Icons",
-    slug: "next-level-icons",
-    desc: "",
-    component: 
-     <Wrapper className='!bg-black'> 
-      <NextLevelIcons />
-     </Wrapper>,
-    image: ""
-  },
+  // {
+  //   id: "15",
+  //   title: "Next Level Icons",
+  //   slug: "next-level-icons",
+  //   desc: "",
+  //   component: 
+  //    <Wrapper className='!bg-black'> 
+  //     <NextLevelIcons />
+  //    </Wrapper>,
+  //   image: ""
+  // },
   // {
   //   id: "",
   //   title: "",

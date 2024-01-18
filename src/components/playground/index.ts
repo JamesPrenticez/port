@@ -10,7 +10,7 @@ export { default as ParticleImage } from './ParticleImage';
 export { default as Waves } from './Wave';
 export { default as StripeNavbar } from './StripeNavbar';
 export { default as TransparentTextEffect } from './TransparentTextEffect';
-export { default as NextLevelIcons } from './NextLevelIcons';
+// export { default as NextLevelIcons } from './NextLevelIcons';
 export { default as Cube } from './Cube';
 export * from './FormValidation';
 
