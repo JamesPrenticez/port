@@ -3,16 +3,6 @@ type IValidationResult = { isValid: boolean; errorMessage?: string };
 
 type ValidatorFn<T> = (value: T) => IValidationResult;
 
-type ValidatorFactoryType<T> = {
-  validate: ValidatorFn<T>;
-  string?: (errorMessage?: string) => ValidatorFactoryType<string>;
-  number?: (errorMessage?: string) => ValidatorFactoryType<number>;
-  email?: (errorMessage?: string) => ValidatorFactoryType<string>;
-  required?: (errorMessage?: string) => ValidatorFactoryType<any>;
-  minLength?: (minLength?: number, errorMessage?: string,) => ValidatorFactoryType<string>;
-  positive?: (errorMessage?: string) => ValidatorFactoryType<number>;
-};
-
 //  ========================================================================================
 //  Form Validator Class with Chainable Validation Methods
 //  ========================================================================================
@@ -21,11 +11,6 @@ class FormValidator {
 
   static create(): FormValidator {
     return new FormValidator();
-  }
-
-  private addValidator<T>(validator: ValidatorFn<T>): this {
-    this.validators.push(validator as ValidatorFn<any>);
-    return this;
   }
 
   validate(value: any): IValidationResult {

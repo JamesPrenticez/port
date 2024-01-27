@@ -1,10 +1,11 @@
 import React, { type ReactElement } from 'react'
-import GridDnD from '@components/GridDnD/GridDnD'
+import ProjectComponent from '@components/Projects/ProjectComponent'
 
 function Projects(): ReactElement {
   return (
     <main>
-      <GridDnD />
+      {/* <GridDnD /> */}
+      <ProjectComponent />
     </main>
   )
 }

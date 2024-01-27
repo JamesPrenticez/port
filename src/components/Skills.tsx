@@ -96,7 +96,7 @@ function Item(props) {
         {...attributes}
         {...listeners}
       >
-      <div ref={ref} className="w-full h-full">
+      <div ref={ref} className="w-[80%] h-[80%]">
         <Squircle 
           width={cellWidth}
           bgcolor= " #2c5ec0"

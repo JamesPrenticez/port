@@ -1,4 +1,4 @@
-import { useState, ChangeEvent } from 'react';
+import { useState } from 'react';
 
 interface IValidationSchema {
   [field: string]: any;
@@ -7,7 +7,7 @@ interface IValidationSchema {
 interface IUseForm<T> {
   initialState: T;
   validationSchema: IValidationSchema;
-  validatorFn: (data: Record<string, any>, schema: Record<string, any>) => Record<string, IValidationResult>;
+  validatorFn: (data: T, schema: Record<string, any>) => Record<string, IValidationResult>;
   onSubmit: () => void;
 }
 
@@ -96,7 +96,8 @@ function useForm<T>({
 export default useForm;
 
 // Don't show validation errors for fields that are initially empty, but you will show errors for fields that have initial values that fail validation
-function getInitalErrors(initialState, validationSchema, validatorFn){
+// We don't need to type safe this function because it just an abstraction from above for readability
+function getInitalErrors(initialState: any, validationSchema: any, validatorFn: any){
 
   const initialErrors = Object.keys(initialState).reduce((acc, key) => {
     const value = initialState[key];
