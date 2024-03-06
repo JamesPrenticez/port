@@ -16,8 +16,10 @@ import {
   Waves,
   StripeNavbar,
   TransparentTextEffect,
+  SynthWave,
   // NextLevelIcons,
-  Cube
+  Cube,
+  ProcessDisplay
 } from "@components/playground"
 import ParticleImage from '@components/playground/ParticleImage';
 import TextEffect from '@components/common/TextEffect';
@@ -227,6 +229,28 @@ export const data: IPlaygroundProjects[] = [
   //    </Wrapper>,
   //   image: ""
   // },
+  {
+    id: "16",
+    title: "SynthWave",
+    slug: "synthwave",
+    desc: "",
+    component: 
+     <Wrapper> 
+      <SynthWave />
+     </Wrapper>,
+    image: ""
+  },
+  {
+    id: "17",
+    title: "Process Display",
+    slug: "process-display",
+    desc: "",
+    component: 
+     <Wrapper> 
+      <ProcessDisplay />
+     </Wrapper>,
+    image: ""
+  },
   // {
   //   id: "",
   //   title: "",

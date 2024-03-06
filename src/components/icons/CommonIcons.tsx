@@ -15,3 +15,23 @@ export const ArrowBackIcon = (props: SVGProps<SVGSVGElement>): ReactElement => {
     </svg>
   )
 }
+
+// more spinners here: https://codepen.io/danvim/pen/XWxNGOx
+export const Spinner = (props: SVGProps<SVGSVGElement>): ReactElement => {
+  return (
+    <svg viewBox="0 0 100 100" width="100%" height="100%">
+      <circle cx="50" cy="50" r="35" fill="none" stroke="#002bfe" stroke-width="7" stroke-dasharray="200" stroke-dashoffset="120" transform="rotate(-90 ) translate(-100 0)" stroke-linecap="round">
+      <animateTransform 
+        type="rotate"
+        attributeName="transform"
+        values="0 50 50; 360 50 50"
+        repeatCount="indefinite"
+        dur="1s"
+        calcMode="spline"
+        keyTimes="0;1"
+        keySplines="0.9 0.5 0.6 0.5"
+      />
+      </circle>
+    </svg>
+  )
+}

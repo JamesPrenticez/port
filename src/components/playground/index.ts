@@ -10,6 +10,8 @@ export { default as ParticleImage } from './ParticleImage';
 export { default as Waves } from './Wave';
 export { default as StripeNavbar } from './StripeNavbar';
 export { default as TransparentTextEffect } from './TransparentTextEffect';
+export { default as SynthWave } from './SynthWave';
+export { default as ProcessDisplay } from './ProcessDisplay';
 // export { default as NextLevelIcons } from './NextLevelIcons';
 export { default as Cube } from './Cube';
 export * from './FormValidation';
