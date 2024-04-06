@@ -14,7 +14,7 @@ const data = [
   {id: "8", img: rocket, heading: "Launch8", subHeading: "30 minute launch call", description: "The offical launch of the series,  announcement, ecent foals and forma, and a focux on acquiring participants."}
 ]
 
-const ProcessDisplay = () => {
+const Test = () => {
 
   const sizes = {
     desktop: [
@@ -558,4 +558,13 @@ const ProcessDisplay = () => {
   }
 }
 
-export default ProcessDisplay;
+export default Test;
+
+// TODO
+// [x] add triange
+// [x] tab focusing
+// [x] support background image
+// [o] handle diff content lengths
+// [o] add swipe icon at mobile breakpoint to first item
+
+

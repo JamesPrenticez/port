@@ -7,14 +7,13 @@ export { WeirdInput as WeirdInput } from './WeirdInput';
 export { default as HorizontalScroller } from './HorizontalScroller';
 export { default as Squircle } from './Squircle';
 export { default as ParticleImage } from './ParticleImage';
-export { default as Waves } from './Wave';
 export { default as StripeNavbar } from './StripeNavbar';
 export { default as TransparentTextEffect } from './TransparentTextEffect';
 export { default as SynthWave } from './SynthWave';
 export { default as ProcessDisplay } from './ProcessDisplay';
-// export { default as NextLevelIcons } from './NextLevelIcons';
 export { default as Cube } from './Cube';
 export * from './FormValidation';
+// export { default as NextLevelIcons } from './NextLevelIcons';
 
 // Already done
 // [x] Custom Forms with UI components
@@ -28,7 +27,6 @@ export * from './FormValidation';
 // [] Self Driving Car - https://github.com/JamesPrenticez/self-driving-car
 // [] Particle Text Effect
 // [x] Particle Image Effect
-// [x] Wave 
 // [] Character moves
 // [] Infinite Scroll - https://github.com/JamesPrenticez/infinite-scroll
 // [] Recursive Tree - https://github.com/JamesPrenticez/tree
