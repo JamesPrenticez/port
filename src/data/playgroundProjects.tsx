@@ -19,10 +19,11 @@ import {
   // NextLevelIcons,
   Cube,
   ProcessDisplay,
+  TilePage,
 } from "@components/playground"
 import ParticleImage from '@components/playground/ParticleImage';
 import TextEffect from '@components/common/TextEffect';
-import TextEffect2 from '@components/common/TextEffect2';
+import ProcessDisplayPage from '@components/playground/ProcessDisplay/ProcessDisplayPage';
 
 
 export const data: IPlaygroundProjects[] = [
@@ -223,8 +224,19 @@ export const data: IPlaygroundProjects[] = [
     slug: "process-display",
     desc: "",
     component: 
-     <Wrapper> 
-      <ProcessDisplay />
+     <Wrapper className='!block'> 
+      <ProcessDisplayPage />
+     </Wrapper>,
+    image: ""
+  },
+  {
+    id: "18",
+    title: "Tile",
+    slug: "tile",
+    desc: "",
+    component: 
+     <Wrapper className='!block'> 
+      <TilePage />
      </Wrapper>,
     image: ""
   },

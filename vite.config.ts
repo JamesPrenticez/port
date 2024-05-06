@@ -16,6 +16,15 @@ export default defineConfig({
     },
     setupFiles: ["src/setupTest.ts"],
   },
+  css: {
+    preprocessorOptions: {
+      less: {
+        math: "always",
+        relativeUrls: true,
+        javascriptEnabled: true
+      },
+    },
+  },
   plugins: [
     react(),
     alias({

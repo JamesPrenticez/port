@@ -49,9 +49,7 @@ const ProcessDisplay = () => {
     style.innerHTML = `
 
     .process-display-container{
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
+      height: 720px;
       position: relative;
       background: linear-gradient(97.57deg, #000A14 0%, #00167F 100%);
       min-height: 100vh;
@@ -142,12 +140,9 @@ const ProcessDisplay = () => {
 
     .process-display-card-image{
       width: 120px;
-      // width: 80px;
-      // height: 85px;
     }
 
     .process-display-card-heading{
-      font-family: Montserrat;
       font-size: 24px;
       font-weight: 600;
       line-height: 32px;
@@ -156,7 +151,6 @@ const ProcessDisplay = () => {
     }
 
     .process-display-card-subHeading{
-      font-family: Montserrat;
       font-size: 16px;
       font-weight: 400;
       line-height: 24px;
@@ -165,7 +159,6 @@ const ProcessDisplay = () => {
     }
 
     .process-display-card-description{
-      font-family: Montserrat;
       font-size: 16px;
       font-weight: 400;
       line-height: 24px;
@@ -189,9 +182,8 @@ const ProcessDisplay = () => {
       left: 50%;
       transform: translate(-50%, -50%);
       color: #fff;
-      font-family: Montserrat;
       font-size: 48px;
-      font-weight: 300;
+      font-weight: 400;
       line-height: 64px;
       letter-spacing: -0.5px;
       text-align: center;

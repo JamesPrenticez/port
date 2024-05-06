@@ -11,22 +11,30 @@ export { default as StripeNavbar } from './StripeNavbar';
 export { default as TransparentTextEffect } from './TransparentTextEffect';
 export { default as SynthWave } from './SynthWave';
 export { default as ProcessDisplay } from './ProcessDisplay';
+export { default as TilePage } from './Tile/TilePage';
 export { default as Cube } from './Cube';
 export * from './FormValidation';
 // export { default as NextLevelIcons } from './NextLevelIcons';
 
+// Additional work required
+// [] handle resize inside a div not the window [https://www.npmjs.com/package/react-resizable-layout]
+// [] upgrade the left nav add a submenu to the left hand nav - (see workbench)
+
+// From work
+// [] Process Display
+// [] Circular Item Carousel
+// [] Tile
+// [] Underline
+// [] Intersection Observation 
+
+// UI
+// [] Datepicker
+// [] Autocomplete (update)
+
 // Already done
-// [x] Custom Forms with UI components
-// [x] Weird Input - https://codepen.io/ipacmanx/pen/NLeEwJ
-// [x] Bard 
-// [x] Cube -
-// [x] Cogs -
 // [] Timer - 
-// [x] Bounce Text Effect -
-// [x] Hungy Catapiller
 // [] Self Driving Car - https://github.com/JamesPrenticez/self-driving-car
 // [] Particle Text Effect
-// [x] Particle Image Effect
 // [] Character moves
 // [] Infinite Scroll - https://github.com/JamesPrenticez/infinite-scroll
 // [] Recursive Tree - https://github.com/JamesPrenticez/tree
@@ -34,6 +42,14 @@ export * from './FormValidation';
 // [] Three js minecraft chest - https://github.com/JamesPrenticez/three
 // [] Ellipses
 // [o] Firewatch Parallax - https://github.com/JamesPrenticez/arcade/commit/39e9b3094b28cc43e9185c71838c77363bf4789a#diff-1d8402cb1fef613d6f3026c2a376177c3c8223ed5ffa91d92f3a3eb087120623
+// [x] Custom Forms with UI components
+// [x] Weird Input - https://codepen.io/ipacmanx/pen/NLeEwJ
+// [x] Bard 
+// [x] Cube -
+// [x] Cogs -
+// [x] Bounce Text Effect -
+// [x] Hungy Catapiller
+// [x] Particle Image Effect
 // [x] Hand Writing Effect - https://maxwellito.github.io/vivus-instant/ | https://codepen.io/OlgaKoplik/pen/YbwLNO | https://codepen.io/simon_tw/pen/zeJKPz
 // [x] Squircle
 // [x] StripeNavbar
