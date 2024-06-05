@@ -20,6 +20,7 @@ import {
   Cube,
   ProcessDisplay,
   TilePage,
+  Minecraft
 } from "@components/playground"
 import ParticleImage from '@components/playground/ParticleImage';
 import TextEffect from '@components/common/TextEffect';
@@ -237,6 +238,17 @@ export const data: IPlaygroundProjects[] = [
     component: 
      <Wrapper className='!block'> 
       <TilePage />
+     </Wrapper>,
+    image: ""
+  },
+  {
+    id: "20",
+    title: "Minecraft",
+    slug: "minecraft",
+    desc: "",
+    component: 
+     <Wrapper className='!block'> 
+      <Minecraft />
      </Wrapper>,
     image: ""
   },

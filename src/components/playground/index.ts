@@ -13,6 +13,7 @@ export { default as SynthWave } from './SynthWave';
 export { default as ProcessDisplay } from './ProcessDisplay';
 export { default as TilePage } from './Tile/TilePage';
 export { default as Cube } from './Cube';
+export { default as Minecraft } from './Minecraft/Minecraft';
 export * from './FormValidation';
 // export { default as NextLevelIcons } from './NextLevelIcons';
 
@@ -39,7 +40,7 @@ export * from './FormValidation';
 // [] Infinite Scroll - https://github.com/JamesPrenticez/infinite-scroll
 // [] Recursive Tree - https://github.com/JamesPrenticez/tree
 // [o] Isometric grid - https://github.com/JamesPrenticez/isometric
-// [] Three js minecraft chest - https://github.com/JamesPrenticez/three
+// [x] Three js minecraft chest - https://github.com/JamesPrenticez/three
 // [] Ellipses
 // [o] Firewatch Parallax - https://github.com/JamesPrenticez/arcade/commit/39e9b3094b28cc43e9185c71838c77363bf4789a#diff-1d8402cb1fef613d6f3026c2a376177c3c8223ed5ffa91d92f3a3eb087120623
 // [x] Custom Forms with UI components
