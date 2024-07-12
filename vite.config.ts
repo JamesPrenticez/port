@@ -34,6 +34,7 @@ export default defineConfig({
         { find: '@assets', replacement: '/src/assets' },
         { find: '@lib', replacement: '/src/lib' },
         { find: '@data', replacement: '/src/data' },
+        { find: '@constants', replacement: '/src/constants' },
       ],
     }),
   ],

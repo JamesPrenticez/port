@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { data } from "../data/playgroundProjects";
-import Sidebar from "@components/Sidebar";
+import { data } from "@components/playground/main";
+import Sidebar from "@components/layout/Sidebar";
 import TextEffect from "@components/common/TextEffect";
 
 const Playground = () => {
@@ -12,10 +12,15 @@ const Playground = () => {
 
         <div className="flex grow">
           <Routes>
-            <Route index element={<PlaygroundHomepage />} />
+            
+            <Route index element={
+              <PlaygroundHomepage />
+            } />
+
             {data.map((data) => (
               <Route key={data.id} path={data.slug} element={data.component} />
             ))}
+            
           </Routes>
         </div>
       </div>

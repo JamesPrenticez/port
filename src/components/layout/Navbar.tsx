@@ -1,40 +1,41 @@
-import React, { type ReactElement } from "react";
-import { NavLink } from "react-router-dom";
-import { project, pages } from "../../constants";
-import Logo from "../common/Logo";
+import React from 'react'
+import TextEffect from '../common/TextEffect'
+import { useRefContext } from '../providers/refProvider'
+import { NavLink, Link, useLocation } from "react-router-dom";
 
-const Navbar = (): ReactElement => {
+function Navbar() {
+  const { projectsRef, skillsRef, hobbiesRef} = useRefContext()
+
+  const executeScroll = (ref) => {
+    ref.current.scrollIntoView({behavior: "smooth"})  
+  }
+  
   return (
-    <div className="min-h-[5rem] bg-green-900 text-white flex font-semibold px-4">
-      <div className="flex justify-between items-center max-w-7xl w-full mx-auto">
-        <NavLink to="/">
-          <div className="flex items-center space-x-2 cursor-pointer">
-            <Logo width={50} />
-            <h1 className="text-3xl hover:text-gray-300">{project.name}</h1>
-          </div>
-        </NavLink>
-
-        <div className="flex space-x-2 cursor-pointer">
-          {pages.map(
-            (page) =>
-              !page.requiresAuth && (
-                <NavLink
-                  key={page.name}
-                  to={page.url}
-                  style={({ isActive }) =>
-                    isActive
-                      ? { color: "  rgb(234 179 8)" }
-                      : { color: "rgb(255 255 255)" }
-                  }
-                >
-                  <p className="hover:text-yellow-500">{page.name}</p>
-                </NavLink>
-              )
-          )}
-        </div>
+    <nav className="absolute top-0 left-0 py-5 w-full z-50 px-4 flex">
+      
+      <div className="md:hidden">
+        <TextEffect text={"JP"}/>
       </div>
-    </div>
-  );
-};
 
-export default Navbar;
+      <ul className='flex ml-auto space-x-4 cursor-pointer text-gray-100 font-medium items-center'>
+        <li className="hover:text-orange-500" onClick={() => executeScroll(skillsRef)}>Skills</li>
+        <li className="hover:text-orange-500" onClick={() => executeScroll(projectsRef)}>Projects</li>
+        <li className="hover:text-orange-500" onClick={() => executeScroll(hobbiesRef)}>Hobbies</li>
+
+        <NavLink 
+          to="/playground"
+          
+          style={({ isActive }) =>
+            isActive
+              ? { color: "green"}
+              : { color: "" }
+          }
+        >
+          <p className="hover:text-orange-500">Playground</p>
+        </NavLink>
+      </ul>
+    </nav>
+  )
+}
+
+export default Navbar

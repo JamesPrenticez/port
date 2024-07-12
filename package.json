@@ -27,7 +27,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.13.0",
     "react-three-fiber": "^6.0.13",
-    "tailwind-merge": "^2.2.0",
+    "tailwind-merge": "^2.4.0",
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {

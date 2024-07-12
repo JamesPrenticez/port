@@ -5,8 +5,6 @@ import { blog0, blog1, blog2, blog3, blog4, blog5, blog6, blog7 } from '../asset
 import { car0 } from '../assets/projects/car';
 import { algo0 } from '../assets/projects/algo';
 
-
-
 import egyptian from '../assets/projects/egyptian.avif';
 import blog from '../assets/projects/blog.avif';
 import selfreg from '../assets/projects/selfreg.avif';

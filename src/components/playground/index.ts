@@ -1,20 +1,22 @@
-export { default as Bard } from './Bard';
-export { default as HungryCaterpiller } from './HungryCaterpiller';
-export { default as Cogs } from './Cogs';
-export { default as BouncyText } from './BouncyText';
-export { Handwriting as Handwriting } from './Handwriting';
-export { WeirdInput as WeirdInput } from './WeirdInput';
-export { default as HorizontalScroller } from './HorizontalScroller';
-export { default as Squircle } from './Squircle';
-export { default as ParticleImage } from './ParticleImage';
-export { default as StripeNavbar } from './StripeNavbar';
-export { default as TransparentTextEffect } from './TransparentTextEffect';
-export { default as SynthWave } from './SynthWave';
-export { default as ProcessDisplay } from './ProcessDisplay';
-export { default as TilePage } from './Tile/TilePage';
-export { default as Cube } from './Cube';
-export { default as Minecraft } from './Minecraft/Minecraft';
+export { default as Bard } from './Animation/Bard';
+export { default as HungryCaterpiller } from '../../../dump/HungryCaterpiller';
+export { default as Cogs } from './Animation/Cogs';
+export { default as BouncyText } from './TextEffects/BouncyText';
+export { Handwriting as Handwriting } from './TextEffects/Handwriting';
+export { WeirdInput as WeirdInput } from './Inputs/WeirdInput';
+export { default as HorizontalScroller } from './Components/HorizontalScroller';
+export { default as Squircle } from './Static/Squircle';
+export { default as ParticleImage } from './Interactive/ParticleImage';
+export { default as StripeNavbar } from './Components/StripeNavbar';
+export { default as TransparentTextEffect } from './TextEffects/TransparentTextEffect';
+export { default as SynthWave } from './Static/SynthWave';
+export { default as ProcessDisplay } from './Components/ProcessDisplay/ProcessDisplayPage';
+export { default as TilePage } from './Components/Tile/TilePage';
+export { default as Cube } from './Animation/Cube';
+export { default as Minecraft } from './3D/Minecraft/Minecraft';
+export { default as DotSlider } from './Inputs/DotSlider';
 export * from './FormValidation';
+
 // export { default as NextLevelIcons } from './NextLevelIcons';
 
 // Additional work required
@@ -72,3 +74,4 @@ export * from './FormValidation';
 // SoundWaves - https://codepen.io/jamiem89/pen/WNLyGXQ
 // Rat Smashing Dopamine Button - https://www.google.com/search?sca_esv=563955783&sxsrf=AB5stBiYFNsH9VhKv3iQoeL50ScVQ6k3cw:1694247638774&q=rat+smashing+dopamine+button&tbm=isch&source=lnms&sa=X&ved=2ahUKEwiDtq6ljJ2BAxUVZ94KHZWOApIQ0pQJegQIDxAB&biw=1920&bih=931&dpr=1
 // Rubix Cube - https://codepen.io/bsehovac/details/EMyWVv
+

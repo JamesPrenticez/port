@@ -1,7 +1,6 @@
-import React, { HTMLProps, type ReactNode } from 'react'
 import { type IPlaygroundProjects } from "@models";
 import { skills } from '@components/Skills';
-import { dog } from '../assets/playgroundProjects';
+import { dog } from '../../assets/playgroundProjects';
 
 import {
   FormValidation,
@@ -16,15 +15,16 @@ import {
   StripeNavbar,
   TransparentTextEffect,
   SynthWave,
-  // NextLevelIcons,
   Cube,
   ProcessDisplay,
   TilePage,
-  Minecraft
+  Minecraft,
+  ParticleImage
 } from "@components/playground"
-import ParticleImage from '@components/playground/ParticleImage';
+
 import TextEffect from '@components/common/TextEffect';
-import ProcessDisplayPage from '@components/playground/ProcessDisplay/ProcessDisplayPage';
+import ProcessDisplayPage from '@components/playground/Components/ProcessDisplay/ProcessDisplayPage';
+import Wrapper from './Wrapper';
 
 
 export const data: IPlaygroundProjects[] = [
@@ -197,17 +197,6 @@ export const data: IPlaygroundProjects[] = [
      </Wrapper>,
     image: ""
   },
-  // {
-  //   id: "15",
-  //   title: "Next Level Icons",
-  //   slug: "next-level-icons",
-  //   desc: "",
-  //   component: 
-  //    <Wrapper className='!bg-black'> 
-  //     <NextLevelIcons />
-  //    </Wrapper>,
-  //   image: ""
-  // },
   {
     id: "16",
     title: "SynthWave",
@@ -252,28 +241,8 @@ export const data: IPlaygroundProjects[] = [
      </Wrapper>,
     image: ""
   },
-  // {
-  //   id: "",
-  //   title: "",
-  //   slug: "",
-  //   desc: "",
-  //   component: 
-  //    <Wrapper> 
-  //    </Wrapper>,
-  //   image: ""
-  // },
+
 ]
 
-interface WrapperProps extends HTMLProps<HTMLDivElement> {
-  className?: string;
-  children: ReactNode;
-}
 
-function Wrapper({ children, className }: WrapperProps){
-  return (
-    <div className={`bg-gray-50 flex w-full items-center justify-center ${className}`}>
-      {children}
-    </div>
-  );
-}
 

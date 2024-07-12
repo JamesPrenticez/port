@@ -10,7 +10,7 @@ interface Props extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'onCha
   renderIcon?: ReactNode;
 }
 
-export function Autocomplete({ 
+function Autocomplete({ 
   value,
   options,
   onChange,
@@ -193,3 +193,5 @@ export function Autocomplete({
     </>
   )
 }
+
+export default Autocomplete;

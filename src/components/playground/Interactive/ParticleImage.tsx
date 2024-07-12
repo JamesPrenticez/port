@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect, useMemo } from 'react';
-import useCanvas from '../../hooks/useCanvas';
-import useMousePosition from '../../hooks/useMousePosition';
+import useCanvas from '../../../hooks/useCanvas';
+import useMousePosition from '../../../hooks/useMousePosition';
 
 interface Props {
   img: string;

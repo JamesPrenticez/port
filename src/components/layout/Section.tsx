@@ -2,20 +2,31 @@ import React, {
   forwardRef,
   type ReactNode,
   type HTMLProps 
-} from 'react'
+} from "react"
+
+import { twMerge } from "tailwind-merge"
+
+
 
 interface SectionProps extends HTMLProps<HTMLElement> {
+  height?: string;
+  snapScroll?: boolean;
   children: ReactNode;
 } 
 
 const Section = forwardRef(({ 
+  height,
   className,
   children,
 }: SectionProps, ref: any) => {
   return (
     <section 
       ref={ref} 
-      className={`min-h-screen flex flex-col relative md:snap-center ${className}`}
+      className={twMerge(`
+        flex flex-col relative md:snap-center`,
+        height ? height : "min-h-screen",
+        className
+      )}
       // style={{ 
       //   scrollSnapAlign: "center"
       // }}

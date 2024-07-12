@@ -1,4 +1,5 @@
 ```settings.json
+  
 {
     "editor.showFoldingControls": "always",
     "editor.folding": true,
