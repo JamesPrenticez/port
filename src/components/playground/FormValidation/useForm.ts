@@ -79,6 +79,7 @@ function useForm<T>({
   
     if (isFormValid) {
       onSubmit();
+      setFormErrors(initialErrors);
     } 
 
     return
